@@ -273,47 +273,101 @@
         </div>
     </section>
 
-    <section id="contact" class="section contact-section section-gradient">
+    <section id="contact" class="section contact-section">
         <div class="container">
             <h3 class="section-title animate-on-scroll">Ready to Take the Work Out of Working?</h3>
-            <p class="animate-on-scroll delay-1">Your journey to automated, data-driven operations begins here. Fill out the form or contact us directly.</p>
+            <p class="section-subtitle-contact animate-on-scroll delay-1">Your journey to automated, data-driven operations begins here. Fill out the form or contact us directly.</p>
             
             <div class="contact-grid">
                 <form class="contact-form animate-on-scroll delay-2" 
-      action="https://formsubmit.co/courd@aibizlutions.com" 
-      method="POST"
-      onsubmit="setTimeout(function(){ window.location.reload(); }, 2000);">
+                    action="https://formsubmit.co/support@aibizlutions.com" 
+                    method="POST"
+                    onsubmit="setTimeout(function(){ window.location.reload(); }, 2000);">
 
-    <input type="hidden" name="_subject" value="New AI Bizlutions Website Lead">
-    <input type="hidden" name="_autoresponse" value="Thank you for your inquiry to AI Bizlutions. We received your request and a specialist will be in touch within one business day.">
-    
-    <input type="text" name="Name" placeholder="Your Name" required>
-    <input type="email" name="Email" placeholder="Work Email" required>
-    <input type="text" name="Company Name" placeholder="Company Name" required>
-    
-    <select name="Company Size" required>
-        <option value="" disabled selected>Company Size (Employees)</option>
-        <option value="20-50">20 - 50</option>
-        <option value="50-100">50 - 100</option>
-        <option value="100+">100+</option>
-    </select>
-    <textarea name="Pain Point" placeholder="Tell us about your biggest operational pain point..." required></textarea>
-    
-    <button type="submit" class="btn btn-primary">Start My Transformation</button>
-</form>
+                    <input type="hidden" name="_subject" value="New AI Bizlutions Website Lead">
+                    <input type="hidden" name="_autoresponse" value="Thank you for your inquiry to AI Bizlutions. We received your request and a specialist will be in touch within one business day.">
+                    
+                    <div class="form-group">
+                        <label for="name"><i class="fi fi-rr-user"></i> Your Name</label>
+                        <input type="text" id="name" name="Name" placeholder="John Smith" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"><i class="fi fi-rr-envelope"></i> Work Email</label>
+                        <input type="email" id="email" name="Email" placeholder="john@company.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company"><i class="fi fi-rr-building"></i> Company Name</label>
+                        <input type="text" id="company" name="Company Name" placeholder="Your Company" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="size"><i class="fi fi-rr-users-alt"></i> Company Size</label>
+                        <select id="size" name="Company Size" required>
+                            <option value="" disabled selected>Select employee count</option>
+                            <option value="20-50">20 - 50 employees</option>
+                            <option value="50-100">50 - 100 employees</option>
+                            <option value="100+">100+ employees</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="painpoint"><i class="fi fi-rr-comment-alt"></i> Your Biggest Challenge</label>
+                        <textarea id="painpoint" name="Pain Point" placeholder="Tell us about your biggest operational pain point..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span>Start My Transformation</span>
+                        <i class="fi fi-rr-arrow-right"></i>
+                    </button>
+                </form>
 
                 <div class="contact-info animate-on-scroll delay-3">
-                    <h4>Direct Contact</h4>
-                    <p><strong>Email:</strong> support@aibizlutions.com</p>
-                    <p><strong>Phone:</strong> 602-560-9492</p>
-                    
-                    <h4 style="margin-top: 25px;">Headquarters (Remote First)</h4>
-                    <p>Serving Mid-Sized Businesses Nationwide</p>
+                    <div class="contact-card">
+                        <div class="contact-card-header">
+                            <i class="fi fi-sr-headset"></i>
+                            <h4>Direct Contact</h4>
+                        </div>
+                        <div class="contact-details">
+                            <a href="mailto:support@aibizlutions.com" class="contact-item">
+                                <i class="fi fi-rr-envelope"></i>
+                                <div>
+                                    <span class="contact-label">Email</span>
+                                    <span class="contact-value">support@aibizlutions.com</span>
+                                </div>
+                            </a>
+                            <a href="tel:602-560-9492" class="contact-item">
+                                <i class="fi fi-rr-phone-call"></i>
+                                <div>
+                                    <span class="contact-label">Phone</span>
+                                    <span class="contact-value">602-560-9492</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
 
-                    <h4 style="margin-top: 25px;">Stay Connected</h4>
-                    <div class="social-links">
-                        <a href="#" target="_blank">LinkedIn</a> |
-                        <a href="#" target="_blank">Blog/Demos</a>
+                    <div class="contact-card">
+                        <div class="contact-card-header">
+                            <i class="fi fi-sr-marker"></i>
+                            <h4>Location</h4>
+                        </div>
+                        <p class="location-text">Headquarters (Remote First)<br>Serving Mid-Sized Businesses Nationwide</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-header">
+                            <i class="fi fi-sr-share"></i>
+                            <h4>Stay Connected</h4>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" target="_blank" class="social-link">
+                                <i class="fi fi-brands-linkedin"></i> LinkedIn
+                            </a>
+                            <a href="#" target="_blank" class="social-link">
+                                <i class="fi fi-rr-globe"></i> Blog/Demos
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
