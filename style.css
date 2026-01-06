@@ -271,37 +271,128 @@ em {
 }
 
 /* Services Grid */
+/* Services Section */
+.services-section {
+    background: linear-gradient(180deg, #f4f7f9 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.3em;
+    color: #666;
+    margin: -20px auto 50px;
+    max-width: 700px;
+    font-weight: 300;
+}
+
 .service-grid {
-    display: flex;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
     margin-bottom: 60px;
-    flex-wrap: wrap;
 }
 
 .service-card {
-    flex: 1;
-    min-width: 300px;
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    border: 2px solid transparent;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 86, 179, 0.15);
+    border-color: var(--primary-color);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .icon-wrapper {
+    transform: rotate(5deg) scale(1.1);
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0074d9 100%);
 }
 
 .service-card .icon {
-    font-size: 2em;
-    margin-bottom: 15px;
+    font-size: 2.2em;
     color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .icon {
+    transform: scale(1.1);
+    color: white;
 }
 
 .service-card h4 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
+    color: var(--dark-bg);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.service-description {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+.service-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-benefits li {
+    padding: 8px 0;
+    color: var(--dark-bg);
+    font-weight: 500;
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.benefit-icon {
+    color: var(--secondary-color);
+    font-size: 1.1em;
+    flex-shrink: 0;
+}
+
+.service-benefits li::before {
+    display: none;
 }
 
 /* About Section */
@@ -340,6 +431,14 @@ em {
     padding: 5px 0;
     font-weight: 600;
     color: #a4b4d1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.differentiators li i {
+    color: var(--secondary-color);
+    font-size: 1.2em;
 }
 
 /* Process Section */
@@ -563,13 +662,23 @@ footer a:hover {
     }
 
     /* Grid Layouts Stack */
-    .service-grid, .about-content, .process-steps, .contact-grid {
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .about-content, .process-steps, .contact-grid {
         flex-direction: column;
         gap: 20px;
     }
     
     .service-card, .step-card {
         min-width: 100%;
+    }
+
+    .section-subtitle {
+        font-size: 1.1em;
+        margin-bottom: 35px;
     }
 
     .about-image {
@@ -583,6 +692,7 @@ footer a:hover {
         padding-top: 20px;
     }
 }
+
 @media (max-width: 600px) {
     .hero-section h2 {
         font-size: 2.2em;
@@ -601,5 +711,22 @@ footer a:hover {
     .hero-cta-group .btn {
         width: 100%;
         text-align: center;
+    }
+
+    .service-card {
+        padding: 30px 20px;
+    }
+
+    .icon-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+
+    .service-card .icon {
+        font-size: 1.8em;
+    }
+
+    .service-card h4 {
+        font-size: 1.3em;
     }
 }
