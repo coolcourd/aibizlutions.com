@@ -629,40 +629,138 @@ em {
 }
 
 /* Process Section */
-.process-steps {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.step-card {
-    flex: 1;
-    min-width: 280px;
-    padding: 30px;
-    text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+/* Process Section */
+.process-section {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
     position: relative;
-    padding-top: 50px;
 }
 
-.step-number {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--primary-color);
-    color: var(--light-text);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+.process-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.process-step {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px;
+    align-items: flex-start;
+    position: relative;
+}
+
+.process-icon-wrapper {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #0074d9 100%);
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0, 86, 179, 0.25);
+    transition: all 0.4s ease;
+}
+
+.process-step:hover .process-icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 12px 35px rgba(0, 86, 179, 0.35);
+}
+
+.process-icon {
+    font-size: 2.5em;
+    color: white;
+}
+
+.step-badge {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background: var(--secondary-color);
+    color: white;
+    min-width: 50px;
+    height: 50px;
+    padding: 0 8px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85em;
     font-weight: 700;
-    font-size: 1.2em;
-    border: 4px solid var(--light-bg);
+    box-shadow: 0 4px 10px rgba(255, 107, 107, 0.4);
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.process-content {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.process-step:hover .process-content {
+    transform: translateX(5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-left-color: var(--primary-color);
+}
+
+.process-content h4 {
+    color: var(--dark-bg);
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.process-content > p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 1.05em;
+}
+
+.process-deliverables {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.process-deliverables li {
+    color: var(--text-color);
+    font-size: 0.95em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+}
+
+.process-deliverables li i {
+    color: var(--secondary-color);
+    font-size: 1.1em;
+    flex-shrink: 0;
+}
+
+.process-connector {
+    width: 4px;
+    height: 40px;
+    background: linear-gradient(180deg, var(--primary-color) 0%, rgba(0, 86, 179, 0.3) 100%);
+    margin: -30px auto 20px 49px;
+    border-radius: 2px;
+}
+
+.process-step:last-child {
+    margin-bottom: 0;
+}
+
+.process-step:last-child + .process-connector {
+    display: none;
 }
 
 /* Contact Section */
@@ -869,13 +967,27 @@ footer a:hover {
         justify-content: center;
         gap: 40px;
     }
+
+    .process-step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .process-connector {
+        margin: -30px auto 20px;
+    }
+
+    .process-content {
+        width: 100%;
+    }
     
-    .process-steps, .contact-grid {
+    .contact-grid {
         flex-direction: column;
         gap: 20px;
     }
     
-    .service-card, .step-card {
+    .service-card {
         min-width: 100%;
     }
 
@@ -942,6 +1054,27 @@ footer a:hover {
     .team-photo {
         width: 150px;
         height: 150px;
+    }
+
+    .process-icon-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+
+    .process-icon {
+        font-size: 2em;
+    }
+
+    .process-content {
+        padding: 20px;
+    }
+
+    .process-content h4 {
+        font-size: 1.3em;
+    }
+
+    .process-deliverables li {
+        font-size: 0.9em;
     }
 
     .modal-content {
