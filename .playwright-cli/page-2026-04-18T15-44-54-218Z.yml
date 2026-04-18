@@ -1,0 +1,99 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - heading "AI **BIZLUTIONS**" [level=1] [ref=e4]
+      - navigation [ref=e5]:
+        - link "Solutions" [ref=e6] [cursor=pointer]:
+          - /url: /index.html#services
+        - link "About Us" [ref=e7] [cursor=pointer]:
+          - /url: /index.html#about
+        - link "Process" [ref=e8] [cursor=pointer]:
+          - /url: /index.html#process
+        - link "Get Started" [ref=e9] [cursor=pointer]:
+          - /url: /index.html#contact
+  - generic [ref=e12]:
+    - heading "🔒 Privacy Policy" [level=2] [ref=e13]
+    - paragraph [ref=e14]:
+      - strong [ref=e15]: AI Bizlutions LLC
+    - paragraph [ref=e16]:
+      - strong [ref=e17]: "Effective Date:"
+      - text: January 1, 2026
+    - paragraph [ref=e18]: This Privacy Policy explains how AI Bizlutions LLC ("we," "us," or "our") collects, uses, discloses, and safeguards your information when you visit our website (www.aibizlutions.com) and use our services. We respect your privacy and are committed to protecting your personally identifiable information.
+    - separator [ref=e19]
+    - heading "1. Information We Collect" [level=3] [ref=e20]
+    - paragraph [ref=e21]: We only collect information that is necessary for us to qualify potential clients and respond to service inquiries.
+    - heading "A. Information You Voluntarily Provide (Contact Form Submission)" [level=4] [ref=e22]
+    - paragraph [ref=e23]: "When you use the \"Get Started\" contact form on our website, we collect the following personal and professional information:"
+    - list [ref=e24]:
+      - listitem [ref=e25]:
+        - strong [ref=e26]: "Contact Data:"
+        - text: Your Name, Work Email, and Phone Number (if provided).
+      - listitem [ref=e27]:
+        - strong [ref=e28]: "Professional Data:"
+        - text: Company Name, Company Size (Employees), and a description of your Operational Pain Point (the content of the message field).
+    - heading "B. Data Collected Automatically (Cookies and Tracking)" [level=4] [ref=e29]
+    - paragraph [ref=e30]: "We use standard web technologies to improve site performance and understand user behavior:"
+    - list [ref=e31]:
+      - listitem [ref=e32]:
+        - strong [ref=e33]: "Usage Data:"
+        - text: Information about how you access and use the website, such as your IP address, browser type, operating system, the pages you view, the time spent on those pages, and the pages visited before and after our site.
+      - listitem [ref=e34]:
+        - strong [ref=e35]: "Cookies:"
+        - text: Small data files stored on your device that help us recognize you and remember your preferences. We use these only for analytics and site functionality (e.g., remembering if you have previously closed a banner).
+    - separator [ref=e36]
+    - heading "2. How We Use Your Information" [level=3] [ref=e37]
+    - paragraph [ref=e38]: "We use the information collected for various business purposes, primarily to establish contact and provide services:"
+    - list [ref=e39]:
+      - listitem [ref=e40]:
+        - strong [ref=e41]: "To Respond to Inquiries:"
+        - text: To follow up on your contact form submission, qualify your business needs, and schedule a consultation with our operational and technical leads.
+      - listitem [ref=e42]:
+        - strong [ref=e43]: "For Lead Generation:"
+        - text: To manage our sales pipeline and track interest in our AI solutions.
+      - listitem [ref=e44]:
+        - strong [ref=e45]: "To Improve Our Website:"
+        - text: To analyze usage trends and diagnose technical issues, ensuring the site is fast and user-friendly.
+      - listitem [ref=e46]:
+        - strong [ref=e47]: "For Marketing:"
+        - text: To send you updates, news, or promotional materials related to our services, provided you have opted in or have an existing business relationship with us. You can opt-out at any time.
+    - separator [ref=e48]
+    - heading "3. Disclosure of Your Information" [level=3] [ref=e49]
+    - paragraph [ref=e50]: "We do not sell, trade, rent, or otherwise transfer your Personally Identifiable Information to outside parties, except in the following limited circumstances:"
+    - list [ref=e51]:
+      - listitem [ref=e52]:
+        - strong [ref=e53]: "To FormSubmit (Lead Collection):"
+        - text: We use a third-party service (FormSubmit) to securely transmit and forward your contact form data to our internal email addresses. FormSubmit does not store your data for commercial use.
+      - listitem [ref=e54]:
+        - strong [ref=e55]: "To Trusted Contractors:"
+        - text: We may share information with trusted third-party contractors and service providers who perform services for us (e.g., CRM management, data analysis). These parties are bound by confidentiality agreements and are only permitted to use the information for the purposes for which it was disclosed.
+      - listitem [ref=e56]:
+        - strong [ref=e57]: "Legal Requirements:"
+        - text: If required to do so by law or in the good faith belief that such action is necessary to comply with legal processes, protect our rights or property, or ensure the personal safety of users or the public.
+    - separator [ref=e58]
+    - heading "4. Security of Your Information" [level=3] [ref=e59]
+    - paragraph [ref=e60]: We use reasonable administrative, technical, and physical security measures to protect your personal information. However, no electronic transmission over the internet or information storage technology can be guaranteed to be 100% secure. While we strive to protect your personal information, we cannot guarantee its absolute security.
+    - separator [ref=e61]
+    - heading "5. Your Rights and Choices" [level=3] [ref=e62]
+    - list [ref=e63]:
+      - listitem [ref=e64]:
+        - strong [ref=e65]: "Opt-Out of Marketing:"
+        - text: You can opt-out of any future marketing communications from us at any time by contacting us directly using the information below.
+      - listitem [ref=e66]:
+        - strong [ref=e67]: "Access and Correction:"
+        - text: You have the right to request access to the personal data we hold about you and request corrections to any inaccuracies.
+      - listitem [ref=e68]:
+        - strong [ref=e69]: "Deletion:"
+        - text: You may request that we delete any personal data we have collected from you, subject to certain legal exceptions.
+    - separator [ref=e70]
+    - heading "6. Contact Information" [level=3] [ref=e71]
+    - paragraph [ref=e72]: "If you have questions or comments about this Privacy Policy, please contact us at:"
+    - paragraph [ref=e73]:
+      - strong [ref=e74]: AI Bizlutions LLC
+    - paragraph [ref=e75]:
+      - strong [ref=e76]: "Email:"
+      - text: info@aibizlutions.com
+  - contentinfo [ref=e77]:
+    - paragraph [ref=e79]:
+      - text: © 2025 AI Bizlutions LLC. All Rights Reserved. |
+      - link "Privacy Policy" [ref=e80] [cursor=pointer]:
+        - /url: privacy.html
