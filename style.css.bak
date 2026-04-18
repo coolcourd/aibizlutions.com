@@ -209,7 +209,7 @@ em {
 .hero-section {
     background: linear-gradient(135deg, #1f2a41 0%, #0f1828 50%, #1a2332 100%);
     color: var(--light-text);
-    padding: 80px 0 50px;
+    padding: 100px 0 70px;
     text-align: left;
     position: relative;
     overflow: hidden;
@@ -312,7 +312,7 @@ em {
 
 /* General Section Styling */
 .section {
-    padding: 40px 0;
+    padding: 50px 0;
 }
 
 .section-dark {
@@ -326,7 +326,7 @@ em {
 
 .section-title {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 2.2em;
 }
 
@@ -515,14 +515,14 @@ em {
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 40px;
     align-items: start;
 }
 
 .about-text {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .about-intro {
@@ -824,8 +824,8 @@ em {
 
 .process-content > p {
     color: #555;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
     font-size: 1.05em;
 }
 
@@ -844,7 +844,7 @@ em {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 5px 0;
+    padding: 8px 0;
 }
 
 .process-deliverables li i {
@@ -855,7 +855,7 @@ em {
 
 .process-connector {
     width: 4px;
-    height: 25px;
+    height: 40px;
     background: linear-gradient(180deg, var(--primary-color) 0%, rgba(0, 86, 179, 0.3) 100%);
     margin: -30px auto 20px 49px;
     border-radius: 2px;
@@ -878,7 +878,7 @@ em {
 
 /* Contact Section */
 .contact-section {
-    padding: 40px 0;
+    padding: 50px 0;
     color: var(--light-text);
     background: linear-gradient(135deg, #1a2742 0%, #2c3e5f 50%, #1f2a41 100%);
     position: relative;
@@ -919,13 +919,13 @@ em {
 .contact-grid {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    gap: 25px;
+    gap: 35px;
     align-items: start;
 }
 
 .contact-form {
     background: white;
-    padding: 25px;
+    padding: 30px;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
@@ -1194,103 +1194,6 @@ footer a:hover {
 
 /* --- RESPONSIVENESS (Mobile First) --- */
 
-
-/* --- Managed Services Link (in services section) --- */
-.managed-services-link {
-    margin-top: 15px;
-    font-size: 0.95em;
-}
-
-.link-button {
-    background: none;
-    border: none;
-    color: var(--primary-color);
-    font-family: var(--font-family);
-    font-size: 1em;
-    cursor: pointer;
-    text-decoration: underline;
-    padding: 0;
-}
-
-.link-button:hover {
-    color: var(--secondary-color);
-}
-
-/* --- Managed Modal Grid --- */
-.managed-modal-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin: 25px 0;
-}
-
-/* --- Hide on mobile utility --- */
-.hide-mobile {
-    display: block;
-}
-
-/* --- Compact Contact Info Strip --- */
-.contact-info-compact {
-    text-align: center;
-    padding: 10px 0;
-}
-
-.contact-strip {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 12px;
-}
-
-.contact-strip-item {
-
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--light-text);
-    text-decoration: none;
-    font-size: 0.95em;
-}
-
-.contact-strip-item:hover {
-    color: var(--secondary-color);
-}
-
-.contact-strip-item i {
-    font-size: 1.1em;
-    color: var(--secondary-color);
-}
-
-.contact-location-line {
-    font-size: 0.9em;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 15px;
-}
-
-.social-links-inline {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.social-link-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--primary-color);
-    color: var(--light-text);
-    text-decoration: none;
-    font-size: 1.1em;
-    transition: background 0.3s ease;
-}
-
-.social-link-icon:hover {
-    background: var(--secondary-color);
-}
 @media (max-width: 992px) {
     /* Beta Banner */
     .beta-banner {
@@ -1540,28 +1443,6 @@ footer a:hover {
     .contact-card-header {
         margin-bottom: 12px;
     }
-
-    /* Hide about-summary on tablet/mobile */
-    .hide-mobile {
-        display: none;
-    }
-
-    /* Process: hide deliverables on tablet */
-    .process-deliverables {
-        display: none;
-    }
-
-    /* Compact contact strip at tablet */
-    .contact-info-compact {
-        padding: 15px 0;
-    }
-
-    /* Managed modal grid — 2col tablet, 1col mobile */
-    .managed-modal-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
 }
 
 @media (max-width: 600px) {
@@ -1738,272 +1619,4 @@ footer a:hover {
     .managed-card {
         padding: 20px 15px;
     }
-
-    /* --- AGGRESSIVE MOBILE SCROLL REDUCTION --- */
-
-    /* Service cards: horizontal compact layout */
-    .service-card {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 12px;
-        padding: 15px;
-    }
-
-    .service-card .icon-wrapper {
-        flex-shrink: 0;
-        width: 40px;
-        height: 40px;
-    }
-
-    .service-card .icon {
-        font-size: 1.2em;
-    }
-
-    .service-card h4 {
-        font-size: 1.1em;
-        margin-bottom: 4px;
-    }
-
-    .service-description {
-        font-size: 0.85em;
-        line-height: 1.4;
-        -webkit-line-clamp: 3;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-
-    /* Hero ultra-compact */
-    .hero-section {
-        padding: 40px 0 25px;
-        min-height: unset;
-    }
-
-    .hero-section h2 {
-        font-size: 1.9em;
-        line-height: 1.2;
-        margin-bottom: 10px;
-    }
-
-    .hero-section p {
-        font-size: 0.95em;
-        margin: 0 auto 15px auto;
-    }
-
-    /* Section padding ultra-compact */
-    .section {
-        padding: 25px 0;
-    }
-
-    .section-title {
-        font-size: 1.4em;
-        margin-bottom: 10px;
-    }
-
-    .section-subtitle, .section-subtitle-light, .section-subtitle-contact {
-        font-size: 0.95em;
-        margin-bottom: 12px;
-    }
-
-    .section-subtitle-contact {
-        -webkit-line-clamp: 2;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-
-    /* About: keep value prop chips ultra-compact */
-    .value-prop {
-        padding: 6px 12px;
-        border-radius: 16px;
-    }
-
-    .value-prop h5 {
-        font-size: 0.8em;
-    }
-
-    .value-props {
-        gap: 6px;
-    }
-
-    /* About: hide secondary elements, truncate intro */
-    .about-cta {
-        display: none;
-    }
-
-    .about-intro {
-        font-size: 1em;
-        line-height: 1.5;
-        -webkit-line-clamp: 3;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-
-    .about-content {
-        gap: 15px;
-    }
-
-    .team-role {
-        display: none;
-    }
-
-    .team-member h4 {
-        font-size: 0.85em;
-        margin-bottom: 2px;
-    }
-
-    .btn-team-story {
-        font-size: 0.75em;
-        padding: 4px 8px;
-    }
-
-    /* Team photos inline & smaller */
-    .team-photos {
-        flex-direction: row;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .team-photo {
-        width: 80px;
-        height: 80px;
-    }
-
-    .team-name {
-        font-size: 0.75em;
-    }
-
-    /* Process: ultra-compact — icon and title inline */
-    .process-step {
-        margin-bottom: 8px;
-    }
-
-    .process-icon-wrapper {
-        width: 45px;
-        height: 45px;
-    }
-
-    .process-icon {
-        font-size: 1.2em;
-    }
-
-    .step-badge {
-        min-width: 28px;
-        height: 28px;
-        font-size: 0.65em;
-        top: -8px;
-        right: -8px;
-    }
-
-    .process-content {
-        padding: 10px;
-    }
-
-    .process-content h4 {
-        font-size: 1em;
-        margin-bottom: 4px;
-    }
-
-    .process-content > p {
-        font-size: 0.85em;
-        margin-bottom: 0;
-        -webkit-line-clamp: 2;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-
-    .process-connector {
-        height: 10px;
-        margin: -8px auto 5px;
-    }
-
-    /* Contact section compact */
-    .contact-form {
-        padding: 15px 12px;
-    }
-
-    .form-group {
-        margin-bottom: 8px;
-    }
-
-    .form-group label {
-        font-size: 0.85em;
-        margin-bottom: 3px;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-        padding: 8px 10px;
-        font-size: 0.9em;
-    }
-
-    .contact-form textarea {
-        height: 50px;
-    }
-
-    /* Compact contact strip mobile */
-    .contact-strip {
-        gap: 15px;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-strip-item {
-
-        font-size: 0.85em;
-    }
-
-    .contact-location-line {
-        font-size: 0.8em;
-        margin-bottom: 10px;
-    }
-
-    .social-link-icon {
-        width: 35px;
-        height: 35px;
-        font-size: 1em;
-    }
-
-    /* Managed modal single column + compact cards */
-    .managed-modal-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .managed-modal-grid .managed-card {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 12px;
-        padding: 12px;
-    }
-
-    .managed-modal-grid .managed-card i {
-        font-size: 1.5em;
-        flex-shrink: 0;
-    }
-
-    .managed-modal-grid .managed-card h4 {
-        font-size: 1em;
-        margin-bottom: 4px;
-    }
-
-    .managed-modal-grid .managed-card p {
-        font-size: 0.85em;
-        line-height: 1.4;
-    }
-
-    /* Footer tight */
-    footer {
-        padding: 15px 0;
-    }
-
-    footer p {
-        font-size: 0.8em;
-    }
-
-
 }

@@ -68,15 +68,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const modals = {
         story: document.getElementById('storyModal'),
         chase: document.getElementById('chaseModal'),
-        courd: document.getElementById('courdModal'),
-        managed: document.getElementById('managedModal')
+        courd: document.getElementById('courdModal')
     };
 
     const openButtons = {
         story: document.getElementById('openStoryModal'),
         chase: document.getElementById('openChaseModal'),
-        courd: document.getElementById('openCourdModal'),
-        managed: document.getElementById('openManagedModal')
+        courd: document.getElementById('openCourdModal')
     };
 
     const closeButtons = document.querySelectorAll('.modal-close');
