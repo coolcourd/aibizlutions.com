@@ -1268,6 +1268,10 @@ footer a:hover {
     margin-bottom: 15px;
 }
 
+.contact-location-line i {
+    color: var(--secondary-color);
+}
+
 .social-links-inline {
     display: flex;
     justify-content: center;

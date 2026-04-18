@@ -196,7 +196,96 @@
                     </div>
                 </div>
                 <div class="center-text">
-                    <a href="#contact" class="btn btn-primary" onclick="document.getElementById('managedModal').style.display='none';document.body.style.overflow='auto';">Talk to Us About Enterprise</a>
+                    <button id="openEnterpriseModal" class="btn btn-primary">Talk to Us About Enterprise</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enterprise Contact Modal -->
+    <div id="enterpriseModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3>Enterprise Inquiry</h3>
+            <div class="modal-body">
+                <p>Tell us about your business and we'll follow up with a tailored plan for managed services.</p>
+                <form id="enterprise-form" class="contact-form"
+                    action="https://formsubmit.co/support@aibizlutions.com"
+                    method="POST">
+
+                    <input type="hidden" name="_subject" value="Enterprise Inquiry">
+                    <input type="hidden" name="_autoresponse" value="Thank you for your enterprise inquiry. A member of our team will follow up within one business day.">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ent-name"><i class="fi fi-rr-user"></i> Your Name</label>
+                            <input type="text" id="ent-name" name="Name" placeholder="John Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ent-email"><i class="fi fi-rr-envelope"></i> Work Email</label>
+                            <input type="email" id="ent-email" name="Email" placeholder="john@company.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ent-company"><i class="fi fi-rr-building"></i> Company Name</label>
+                            <input type="text" id="ent-company" name="Company Name" placeholder="Your Company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ent-size"><i class="fi fi-rr-users-alt"></i> Company Size</label>
+                            <select id="ent-size" name="Company Size" required>
+                                <option value="" disabled selected>Select employee count</option>
+                                <option value="1-19">1 - 19 employees</option>
+                                <option value="20-50">20 - 50 employees</option>
+                                <option value="50-100">50 - 100 employees</option>
+                                <option value="100+">100+ employees</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ent-challenge"><i class="fi fi-rr-comment-alt"></i> Your Biggest Challenge</label>
+                        <textarea id="ent-challenge" name="Biggest Challenge" placeholder="Tell us about your biggest operational pain point..." required></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ent-interest"><i class="fi fi-rr-star"></i> Which Feature Interests You Most?</label>
+                            <select id="ent-interest" name="Feature Interest">
+                                <option value="" disabled selected>Select one</option>
+                                <option value="AI Task Automation">AI Task Automation</option>
+                                <option value="CRM & Pipeline Management">CRM & Pipeline Management</option>
+                                <option value="Social Media Marketing">Social Media Marketing</option>
+                                <option value="Workflow Automation">Workflow Automation</option>
+                                <option value="Reporting & Analytics">Reporting & Analytics</option>
+                                <option value="All of the Above">All of the Above</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ent-referral"><i class="fi fi-rr-megaphone"></i> How Did You Hear About Us?</label>
+                            <select id="ent-referral" name="Referral Source">
+                                <option value="" disabled selected>Select one</option>
+                                <option value="LinkedIn">LinkedIn</option>
+                                <option value="Instagram">Instagram</option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="Google">Google</option>
+                                <option value="Referral">Referral</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span>Submit Inquiry</span>
+                        <i class="fi fi-rr-arrow-right"></i>
+                    </button>
+                </form>
+
+                <div id="enterprise-form-success" class="form-success-message" role="status" aria-live="polite" style="display: none;">
+                    <i class="fi fi-sr-check-circle"></i>
+                    <h4>Inquiry Received!</h4>
+                    <p>Thank you for your interest in our enterprise services. We'll follow up within one business day.</p>
                 </div>
             </div>
         </div>
@@ -409,32 +498,14 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="email"><i class="fi fi-rr-envelope"></i> Work Email</label>
+                            <label for="email"><i class="fi fi-rr-envelope"></i> Email</label>
                             <input type="email" id="email" name="Email" placeholder="john@company.com" required>
                         </div>
                     </div>
 
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="company"><i class="fi fi-rr-building"></i> Company Name</label>
-                            <input type="text" id="company" name="Company Name" placeholder="Your Company" required>
-                        </div>
-                    
-                        <div class="form-group">
-                            <label for="size"><i class="fi fi-rr-users-alt"></i> Company Size</label>
-                            <select id="size" name="Company Size" required>
-                                <option value="" disabled selected>Select employee count</option>
-                                <option value="1-19">1 - 19 employees</option>
-                                <option value="20-50">20 - 50 employees</option>
-                                <option value="50-100">50 - 100 employees</option>
-                                <option value="100+">100+ employees</option>
-                            </select>
-                        </div>
-                    </div>
-
                     <div class="form-group">
-                        <label for="painpoint"><i class="fi fi-rr-comment-alt"></i> Your Biggest Challenge</label>
-                        <textarea id="painpoint" name="Pain Point" placeholder="Tell us about your biggest operational pain point..." required></textarea>
+                        <label for="qualifications"><i class="fi fi-rr-comment-alt"></i> Why are you a good candidate for the Beta?</label>
+                        <textarea id="qualifications" name="Beta Qualifications" placeholder="List prior experience and qualifications..." required></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-submit">
@@ -461,7 +532,7 @@
                             <span>602-560-9492</span>
                         </a>
                     </div>
-                    <p class="contact-location-line">PO Box 717, Queen Creek, AZ 85142</p>
+                    <p class="contact-location-line"><i class="fi fi-rr-marker"></i>&nbsp; PO Box 717, Queen Creek, AZ 85142</p>
                     <div class="social-links-inline">
                         <a href="https://www.linkedin.com/company/ai-bizlutions/" target="_blank" rel="noopener noreferrer" class="social-link-icon" aria-label="LinkedIn">
                             <i class="fi fi-brands-linkedin"></i>

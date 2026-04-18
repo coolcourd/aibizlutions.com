@@ -69,14 +69,16 @@ document.addEventListener('DOMContentLoaded', () => {
         story: document.getElementById('storyModal'),
         chase: document.getElementById('chaseModal'),
         courd: document.getElementById('courdModal'),
-        managed: document.getElementById('managedModal')
+        managed: document.getElementById('managedModal'),
+        enterprise: document.getElementById('enterpriseModal')
     };
 
     const openButtons = {
         story: document.getElementById('openStoryModal'),
         chase: document.getElementById('openChaseModal'),
         courd: document.getElementById('openCourdModal'),
-        managed: document.getElementById('openManagedModal')
+        managed: document.getElementById('openManagedModal'),
+        enterprise: document.getElementById('openEnterpriseModal')
     };
 
     const closeButtons = document.querySelectorAll('.modal-close');
@@ -166,6 +168,53 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (existing) existing.remove();
                 errorMsg.classList.add('form-error');
                 contactForm.appendChild(errorMsg);
+            });
+        });
+    }
+
+    // 6. Enterprise Form Submission with Confirmation
+    const enterpriseForm = document.getElementById('enterprise-form');
+    const enterpriseSuccess = document.getElementById('enterprise-form-success');
+
+    if (enterpriseForm) {
+        enterpriseForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const submitBtn = enterpriseForm.querySelector('.btn-submit');
+            const submitText = submitBtn.querySelector('span');
+            const originalText = submitText.textContent;
+
+            submitBtn.classList.add('is-loading');
+            submitText.textContent = 'Sending…';
+
+            const formData = new FormData(enterpriseForm);
+
+            fetch(enterpriseForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+                if (response.ok || response.status === 200) {
+                    enterpriseForm.style.display = 'none';
+                    enterpriseSuccess.style.display = 'block';
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(() => {
+                submitBtn.classList.remove('is-loading');
+                submitText.textContent = originalText;
+                const errorMsg = document.createElement('p');
+                errorMsg.textContent = 'Something went wrong. Please try again or email us directly.';
+                errorMsg.style.color = 'var(--secondary-color)';
+                errorMsg.style.textAlign = 'center';
+                errorMsg.style.marginTop = '10px';
+                errorMsg.style.fontWeight = '600';
+                const existing = enterpriseForm.querySelector('.form-error');
+                if (existing) existing.remove();
+                errorMsg.classList.add('form-error');
+                enterpriseForm.appendChild(errorMsg);
             });
         });
     }
