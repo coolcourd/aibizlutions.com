@@ -1,0 +1,19 @@
+feat: aggressive mobile/tablet scroll reduction — 60%+ fewer viewports
+
+Mobile (375px): 7+ viewports condensed to 2.5vp (65% reduction)
+- Flex-wrap service cards (icon+title row, description below)
+- Horizontal process steps, hidden connectors and badges
+- Side-by-side hero CTA buttons, tighter section/container padding
+- Team photos 50px with roles hidden, about intro clamped
+- Standardized form inputs (40px height, 80px textarea)
+- Removed inherited dead-space margins (icon-wrapper, service-grid)
+
+Tablet (768px): 4.2vp condensed to 2.5vp (42% reduction)
+- Horizontal service cards (icon left, text right), 3-line clamp
+- Horizontal process steps with 38px icons
+- Reduced section padding (18px), hero padding (25/15)
+- Team photos 80px, roles hidden, grid gaps reduced
+
+Other:
+- Added line break before "Beta launching soon." in hero
+- Expanded UX-Tester skill (13 audit phases, 7 new reference files)

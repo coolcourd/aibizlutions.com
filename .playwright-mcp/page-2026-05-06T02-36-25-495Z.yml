@@ -1,0 +1,169 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - paragraph [ref=e4]:
+        - text: 🚀 Now accepting applications — beta launching soon.
+        - link "Apply Now →" [ref=e5] [cursor=pointer]:
+          - /url: "#contact"
+      - button "Dismiss beta banner" [ref=e6] [cursor=pointer]: ×
+  - banner [ref=e7]:
+    - generic [ref=e8]:
+      - heading "AI Bizlutions LLC Logo" [level=1] [ref=e9]:
+        - link "AI Bizlutions LLC Logo" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - img "AI Bizlutions LLC Logo" [ref=e11]
+      - generic [ref=e12] [cursor=pointer]: ☰
+  - generic [ref=e15]:
+    - heading "Hire Bo Botty, Your AI Business Partner." [level=2] [ref=e16]:
+      - text: Hire Bo Botty,
+      - text: Your AI Business Partner.
+    - paragraph [ref=e17]:
+      - text: Bo Botty handles the operational work your team shouldn't be doing manually — from intake and follow-ups to scheduling and reporting — so you can focus on growing your business.
+      - strong [ref=e18]: Beta launching soon.
+    - generic [ref=e19]:
+      - link "Apply for Beta Access" [ref=e20] [cursor=pointer]:
+        - /url: "#contact"
+      - link "See What Bo Botty Does" [ref=e21] [cursor=pointer]:
+        - /url: "#services"
+  - generic [ref=e23]:
+    - heading "What Bo Botty Does For You" [level=3] [ref=e24]
+    - paragraph [ref=e25]: Your AI Business Partner handles the busywork so your team can focus on growth
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - generic [ref=e29]: 
+        - heading "Smart Task Automation" [level=4] [ref=e30]
+        - paragraph [ref=e31]: Bo Botty takes over the repetitive work that slows your team down — client intake, follow-ups, scheduling, and document handling — so your people can spend time on what actually moves the business forward.
+        - text:   
+      - generic [ref=e32]:
+        - generic [ref=e34]: 
+        - heading "Connects Your Tools" [level=4] [ref=e35]
+        - paragraph [ref=e36]: Stop bouncing between tabs and copying data from one system to another. Bo Botty links your existing tools into one unified workflow — your CRM, email, calendar, and more — all talking to each other automatically.
+        - text:   
+      - generic [ref=e37]:
+        - generic [ref=e39]: 
+        - heading "See What's Working" [level=4] [ref=e40]
+        - paragraph [ref=e41]: No more guessing or waiting for end-of-month reports. Bo Botty gives you a clear picture of where your time and money go — so you can double down on what's working and fix what isn't.
+        - text:   
+    - generic [ref=e42]:
+      - link "Ready to Try Bo Botty?" [ref=e43] [cursor=pointer]:
+        - /url: "#contact"
+      - paragraph [ref=e44]:
+        - button "Need enterprise managed services?" [ref=e45] [cursor=pointer]
+  - text:            
+  - generic [ref=e47]:
+    - heading "Why We Built Bo Botty" [level=3] [ref=e48]
+    - paragraph [ref=e49]: We built Bo Botty because businesses deserve AI that actually works — not software that collects dust.
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - paragraph [ref=e52]:
+          - text: "AI Bizlutions was founded to solve a problem we kept seeing firsthand:"
+          - strong [ref=e53]: Businesses invest in tools that promise efficiency, but end up underused because they don't fit how the team actually works.
+        - button "Read Our Full Story " [ref=e55]:
+          - text: Read Our Full Story
+          - generic [ref=e56]: 
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - generic [ref=e59]: 
+            - heading "Full Integration" [level=5] [ref=e60]
+          - generic [ref=e61]:
+            - generic [ref=e62]: 
+            - heading "Ongoing Support" [level=5] [ref=e63]
+          - generic [ref=e64]:
+            - generic [ref=e65]: 
+            - heading "Enterprise Advantages" [level=5] [ref=e66]
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - img "Chase Headman - Operations Leader" [ref=e70]
+          - heading "Chase Headman" [level=4] [ref=e71]
+          - paragraph [ref=e72]: Operations & Strategy
+          - button "Read Chase's Story" [ref=e73] [cursor=pointer]
+        - generic [ref=e74]:
+          - img "Courd Headman - Technical AI Expert" [ref=e76]
+          - heading "Courd Headman" [level=4] [ref=e77]
+          - paragraph [ref=e78]: AI & Technical Solutions
+          - button "Read Courd's Story" [ref=e79] [cursor=pointer]
+  - generic [ref=e81]:
+    - heading "Up and Running in Minutes" [level=3] [ref=e82]
+    - paragraph [ref=e83]: Getting started with Bo Botty, Your AI Business Partner, is simple
+    - generic [ref=e84]:
+      - generic [ref=e85]:
+        - generic [ref=e86]:
+          - generic [ref=e87]: 
+          - generic [ref=e88]: Step 1
+        - generic [ref=e89]:
+          - heading "Sign Up & Set Up" [level=4] [ref=e90]
+          - paragraph [ref=e91]: Create your account, tell Bo Botty about your business, and connect the tools you already use.
+          - text:   
+      - generic [ref=e93]:
+        - generic [ref=e94]:
+          - generic [ref=e95]: 
+          - generic [ref=e96]: Step 2
+        - generic [ref=e97]:
+          - heading "Bo Botty Gets to Work" [level=4] [ref=e98]
+          - paragraph [ref=e99]: Your AI Business Partner starts handling tasks, learning your workflows, and surfacing insights — right away.
+          - text:   
+      - generic [ref=e101]:
+        - generic [ref=e102]:
+          - generic [ref=e103]: 
+          - generic [ref=e104]: Step 3
+        - generic [ref=e105]:
+          - heading "Grow With Confidence" [level=4] [ref=e106]
+          - paragraph [ref=e107]: Review your dashboards, see what's working, and scale at your own pace — Bo Botty grows with you.
+          - text:   
+  - generic [ref=e109]:
+    - heading "Apply for Beta Access" [level=3] [ref=e110]
+    - paragraph [ref=e111]: Bo Botty is entering beta. We're looking for a small group of businesses to help shape the product. Apply below and we'll be in touch.
+    - generic [ref=e112]:
+      - generic [ref=e113]:
+        - generic [ref=e114]:
+          - generic [ref=e115]:
+            - generic [ref=e116]:
+              - generic [ref=e117]:
+                - generic [ref=e118]: 
+                - text: Your Name
+              - textbox " Your Name" [ref=e119]:
+                - /placeholder: John Smith
+            - generic [ref=e120]:
+              - generic [ref=e121]:
+                - generic [ref=e122]: 
+                - text: Email
+              - textbox " Email" [ref=e123]:
+                - /placeholder: john@company.com
+          - generic [ref=e124]:
+            - generic [ref=e125]:
+              - generic [ref=e126]: 
+              - text: Why are you a good candidate for the Beta?
+            - textbox " Why are you a good candidate for the Beta?" [ref=e127]:
+              - /placeholder: List prior experience and qualifications...
+          - button "Apply for Beta " [ref=e128]:
+            - generic [ref=e129]: Apply for Beta
+            - generic [ref=e130]: 
+        - text: 
+      - generic [ref=e131]:
+        - generic [ref=e132]:
+          - link " support@aibizlutions.com" [ref=e133] [cursor=pointer]:
+            - /url: mailto:support@aibizlutions.com
+            - generic [ref=e134]: 
+            - generic [ref=e135]: support@aibizlutions.com
+          - link " 602-560-9492" [ref=e136] [cursor=pointer]:
+            - /url: tel:602-560-9492
+            - generic [ref=e137]: 
+            - generic [ref=e138]: 602-560-9492
+        - paragraph [ref=e139]:
+          - generic [ref=e140]: 
+          - text: PO Box 717, Queen Creek, AZ 85142
+        - generic [ref=e141]:
+          - link "LinkedIn" [ref=e142] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/ai-bizlutions/
+            - generic [ref=e143]: 
+          - link "Instagram" [ref=e144] [cursor=pointer]:
+            - /url: https://www.instagram.com/ai_bizlutions/
+            - generic [ref=e145]: 
+          - link "Facebook" [ref=e146] [cursor=pointer]:
+            - /url: https://www.facebook.com/profile.php?id=61585242934558
+            - generic [ref=e147]: 
+  - contentinfo [ref=e148]:
+    - paragraph [ref=e150]:
+      - text: © 2026 AI Bizlutions LLC. All Rights Reserved. |
+      - link "Privacy Policy" [ref=e151] [cursor=pointer]:
+        - /url: /privacy-policy
