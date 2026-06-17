@@ -9,7 +9,7 @@
 - **Type**: Static marketing website for AI Bizlutions LLC
 - **Stack**: Vanilla HTML5, CSS3, JavaScript (ES6+)
 - **Hosting**: GitHub Pages (custom domain via `CNAME`: `aibizlutions.com`)
-- **Fonts**: Google Fonts (Poppins)
+- **Fonts**: Google Fonts (Inter — body/UI, Baloo 2 800 — wordmark/display)
 - **Icons**: Flaticon UIcons (solid-rounded, regular-rounded)
 - **No build tools**: No bundler, no preprocessor — files served as-is
 
@@ -31,19 +31,29 @@
 
 ### CSS Custom Properties (`:root`)
 ```css
---primary-color: #0056b3;      /* Deep Blue — trust */
---secondary-color: #ff6b6b;    /* Bright Coral — action/accent */
---dark-bg: #1f2a41;            /* Dark Charcoal — professionalism */
---light-bg: #f4f7f9;
---text-color: #333;
+/* Locked Bo Botty / AI Bizlutions palette (2026). No purple/violet/indigo. */
+--bo-sky: #0EA5E9;             /* Primary brand accent — CTAs, links */
+--bo-sky-deep: #0284C7;        /* Hover / pressed state */
+--bo-cyan: #22D3EE;            /* Eye glow / highlight accents */
+--bo-ink: #0B1220;             /* Body text on light */
+--bo-navy: #0F172A;            /* Dark sections, header, footer */
+--bo-white: #FFFFFF;           /* Bo's shell, light surfaces */
+
+/* Legacy aliases — mapped to the locked palette so existing rules auto-rebrand. */
+--primary-color: var(--bo-sky);
+--secondary-color: var(--bo-sky);
+--dark-bg: var(--bo-navy);
+--light-bg: var(--bo-white);
+--text-color: var(--bo-ink);
 --light-text: #ffffff;
---font-family: 'Poppins', sans-serif;
+--font-family: 'Inter', sans-serif;
+--font-display: 'Baloo 2', var(--font-family);
 ```
 
 ### Typography
-- Font family: Poppins (weights: 300, 400, 600, 700)
-- Heading hierarchy: `h2` (2.5em) > `h3` (1.8em) > `h4` > `h5`
-- `.highlight` and `.brand-highlight` use `--primary-color` with `font-weight: 700`
+- Font family: Inter (400/500/600/700/800) for body + UI. Baloo 2 800 reserved for the wordmark and hero display headlines (`--font-display`).
+- Heading hierarchy: `h1` is the hero/page headline (`.hero-headline`); the site logo is an `<a class="logo">` (not an `<h1>`). Then `h2` (2.5em) > `h3` (1.8em) > `h4` > `h5`.
+- `.highlight` uses the locked wordmark treatment: white fill + sky stroke (`-webkit-text-stroke`, `paint-order: stroke fill`).
 
 ### Buttons
 - `.btn-primary` — filled primary style
@@ -102,7 +112,7 @@ All JS runs inside `document.addEventListener('DOMContentLoaded', () => { ... })
 4. Add nav link if the section should be navigable
 
 ### Images & Assets
-- Images referenced from root (`logo-t.png`, `chase.jpeg`, `courd.jpg`, `favicon.png`)
+- Images referenced from root: brand kit (`bo-botty-wordmark.svg`, `bo-mascot-full.svg`, `bo-reveal.svg`, `bo-head-sad.svg`, `bo-botty.svg`, `ai-bizlutions.svg`, `favicon.svg`, `og-image.png`) + team photos (`chase.jpeg`, `courd.jpg`). The old `logo-t.png` / `favicon.png` raster files are retired — never re-introduce. The full source brand kit lives in the main app repo at `AI-Bizlutions-/public/Assets/Logos/`.
 - All images need `alt` text
 - Use `width` attribute on `<img>` where appropriate for layout stability
 

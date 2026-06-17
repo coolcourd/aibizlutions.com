@@ -30,20 +30,23 @@ Always use these — never hardcode colors:
 
 | Token | Value | Usage |
 |-------|-------|-------|
-| `--primary-color` | `#0056b3` | Trust/brand blue — headings, highlights, links |
-| `--secondary-color` | `#ff6b6b` | Action coral — primary buttons, CTAs, accents |
-| `--dark-bg` | `#1f2a41` | Dark sections, header, footer |
-| `--light-bg` | `#f4f7f9` | Light section backgrounds |
-| `--text-color` | `#333` | Body text on light backgrounds |
-| `--light-text` | `#ffffff` | Text on dark backgrounds |
-| `--font-family` | `'Poppins', sans-serif` | All text |
+| `--bo-sky` | `#0EA5E9` | Primary brand accent — CTAs, links, button fill |
+| `--bo-sky-deep` | `#0284C7` | Hover / pressed state for `--bo-sky` |
+| `--bo-cyan` | `#22D3EE` | Eye glow / highlight accents |
+| `--bo-ink` | `#0B1220` | Body text on light, contours |
+| `--bo-navy` | `#0F172A` | Dark sections, header, footer |
+| `--bo-white` | `#FFFFFF` | Bo's shell, light surfaces |
+| `--font-family` | `'Inter', sans-serif` | Body + UI |
+| `--font-display` | `'Baloo 2', …` | Wordmark + hero display text |
+
+Legacy aliases (`--primary-color`, `--secondary-color`, `--dark-bg`, `--light-bg`, `--text-color`) are mapped to the locked palette in `:root`. New code should prefer `--bo-*` names. **Never** introduce purple / violet / indigo.
 
 ## Button Decision Tree
 
 | Context | Class | Look |
 |---------|-------|------|
-| Primary CTA on light background | `.btn .btn-primary` | Coral filled |
-| Secondary action on light background | `.btn .btn-secondary` | Blue outlined |
+| Primary CTA on light background | `.btn .btn-primary` | Sky filled (`--bo-sky`), sky-deep on hover |
+| Secondary action on light background | `.btn .btn-secondary` | Sky outlined |
 | Action on dark (`.section-dark`) background | `.btn .btn-secondary-light` | White outlined |
 | Navigation CTA | `.cta-nav-link` | Highlighted nav link |
 | Larger emphasis | Add `.btn-large` | Bigger padding |

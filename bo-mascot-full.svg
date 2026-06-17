@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 244" fill="none">
+  <defs>
+    <radialGradient id="abh" cx="40%" cy="30%" r="80%"><stop offset="0%" stop-color="#ffffff"/><stop offset="65%" stop-color="#f4f8fb"/><stop offset="100%" stop-color="#d8e4ef"/></radialGradient>
+    <linearGradient id="abb" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#dce8f2"/></linearGradient>
+    <linearGradient id="abv" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#16202f"/><stop offset="100%" stop-color="#070b12"/></linearGradient>
+    <radialGradient id="abe" cx="35%" cy="30%" r="80%"><stop offset="0%" stop-color="#b9f8ff"/><stop offset="55%" stop-color="#5ce8f7"/><stop offset="100%" stop-color="#0fb5cf"/></radialGradient>
+  </defs>
+  <ellipse cx="120" cy="236" rx="34" ry="5" fill="#000" opacity="0.22"/>
+  <!-- neck -->
+  <rect x="112" y="120" width="16" height="19" rx="5" fill="#0b1220"/>
+  <!-- legs + boots -->
+  <path d="M111 197 L109.5 220" stroke="url(#abb)" stroke-width="13" stroke-linecap="round"/>
+  <path d="M129 197 L130.5 220" stroke="url(#abb)" stroke-width="13" stroke-linecap="round"/>
+  <rect x="95" y="220" width="23" height="12" rx="6" fill="#0ea5e9"/>
+  <rect x="122" y="220" width="23" height="12" rx="6" fill="#0ea5e9"/>
+  <!-- arms raised (celebrating; seamless tips — no hand objects) -->
+  <path d="M99 142 Q83 129 72 108" stroke="url(#abb)" stroke-width="13" stroke-linecap="round" fill="none"/>
+  <path d="M141 142 Q157 129 168 108" stroke="url(#abb)" stroke-width="13" stroke-linecap="round" fill="none"/>
+  <!-- hourglass torso -->
+  <path d="M104 134 C94 136.5 92 144 95 151.5 C98 158 108 159.5 107 166 C106 173.5 97 176 98 184.5 C99 193.5 105 199 112 200 L128 200 C135 199 141 193.5 142 184.5 C143 176 134 173.5 133 166 C132 159.5 142 158 145 151.5 C148 144 146 136.5 136 134 C126 131 114 131 104 134 Z" fill="url(#abb)" stroke="#c3d3e2" stroke-opacity="0.8"/>
+  <circle cx="120" cy="151.5" r="3.5" fill="url(#abe)"/>
+  <!-- head (joy expression) -->
+  <rect x="64" y="69" width="9" height="23" rx="4.5" fill="#0ea5e9"/>
+  <rect x="167" y="69" width="9" height="23" rx="4.5" fill="#0ea5e9"/>
+  <path d="M120 25 C152 25 169 48 169 79 C169 109 148 127 120 127 C92 127 71 109 71 79 C71 48 88 25 120 25 Z" fill="url(#abh)" stroke="#c3d3e2" stroke-opacity="0.8"/>
+  <ellipse cx="101" cy="43" rx="23" ry="10" fill="#ffffff" opacity="0.55"/>
+  <rect x="83" y="55" width="74" height="51" rx="25.5" fill="url(#abv)"/>
+  <ellipse cx="106" cy="63" rx="19" ry="6" fill="#ffffff" opacity="0.13"/>
+  <path d="M95 83 Q103 71 111 83" stroke="#22d3ee" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M129 83 Q137 71 145 83" stroke="#22d3ee" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M113 95 Q120 101 127 95" stroke="#22d3ee" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <g transform="translate(96 38) rotate(-15) scale(0.69)">
+    <path d="M-2 3 C-6 9 -8 14 -7 19 C-4 17 -1 10 1 4 Z" fill="#0284c7"/>
+    <path d="M2 3 C6 9 8 14 7 19 C4 17 1 10 -1 4 Z" fill="#0284c7"/>
+    <path d="M-3 0 C-15 -11 -24 -1 -12 8 C-7 11 -3 6 -3 0 Z" fill="#0ea5e9"/>
+    <path d="M3 0 C15 -11 24 -1 12 8 C7 11 3 6 3 0 Z" fill="#0ea5e9"/>
+    <rect x="-4" y="-2.5" width="8" height="9" rx="2.5" fill="#0284c7"/>
+  </g>
+</svg>

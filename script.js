@@ -158,16 +158,13 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(() => {
                 submitBtn.classList.remove('is-loading');
                 submitText.textContent = originalText;
-                const errorMsg = document.createElement('p');
-                errorMsg.textContent = 'Something went wrong. Please try again or email us directly.';
-                errorMsg.style.color = 'var(--secondary-color)';
-                errorMsg.style.textAlign = 'center';
-                errorMsg.style.marginTop = '10px';
-                errorMsg.style.fontWeight = '600';
                 const existing = contactForm.querySelector('.form-error');
                 if (existing) existing.remove();
-                errorMsg.classList.add('form-error');
-                contactForm.appendChild(errorMsg);
+                const errorBlock = document.createElement('div');
+                errorBlock.className = 'form-error';
+                errorBlock.setAttribute('role', 'alert');
+                errorBlock.innerHTML = '<img src="bo-head-sad.svg" alt=""><span>Sorry, that didn’t go through. Please try again or email <a href="mailto:support@aibizlutions.com">support@aibizlutions.com</a> directly.</span>';
+                contactForm.appendChild(errorBlock);
             });
         });
     }
@@ -205,16 +202,49 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(() => {
                 submitBtn.classList.remove('is-loading');
                 submitText.textContent = originalText;
-                const errorMsg = document.createElement('p');
-                errorMsg.textContent = 'Something went wrong. Please try again or email us directly.';
-                errorMsg.style.color = 'var(--secondary-color)';
-                errorMsg.style.textAlign = 'center';
-                errorMsg.style.marginTop = '10px';
-                errorMsg.style.fontWeight = '600';
                 const existing = enterpriseForm.querySelector('.form-error');
                 if (existing) existing.remove();
-                errorMsg.classList.add('form-error');
-                enterpriseForm.appendChild(errorMsg);
+                const errorBlock = document.createElement('div');
+                errorBlock.className = 'form-error';
+                errorBlock.setAttribute('role', 'alert');
+                errorBlock.innerHTML = '<img src="bo-head-sad.svg" alt=""><span>Sorry, that didn’t go through. Please try again or email <a href="mailto:support@aibizlutions.com">support@aibizlutions.com</a> directly.</span>';
+                enterpriseForm.appendChild(errorBlock);
+            });
+        });
+    }
+
+    // 7. Hero email-stub (waitlist signup) — re-uses FormSubmit endpoint.
+    const emailStub = document.getElementById('email-stub');
+    const emailStubSuccess = document.getElementById('email-stub-success');
+    if (emailStub) {
+        emailStub.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = emailStub.querySelector('button[type="submit"]');
+            const originalText = btn.textContent;
+            btn.disabled = true;
+            btn.textContent = 'Adding…';
+            fetch(emailStub.action, {
+                method: 'POST',
+                body: new FormData(emailStub),
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(r => {
+                if (r.ok) {
+                    emailStub.style.display = 'none';
+                    if (emailStubSuccess) emailStubSuccess.hidden = false;
+                } else { throw new Error('stub fail'); }
+            })
+            .catch(() => {
+                btn.disabled = false;
+                btn.textContent = originalText;
+                const existing = emailStub.querySelector('.form-error');
+                if (existing) existing.remove();
+                const errorBlock = document.createElement('div');
+                errorBlock.className = 'form-error';
+                errorBlock.setAttribute('role', 'alert');
+                errorBlock.style.gridColumn = '1 / -1';
+                errorBlock.innerHTML = '<img src="bo-head-sad.svg" alt=""><span>Hmm, that didn’t go through. The full form below works too.</span>';
+                emailStub.appendChild(errorBlock);
             });
         });
     }

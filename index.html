@@ -10,18 +10,20 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="AI Bizlutions | Bo Botty, Your AI Business Partner">
     <meta property="og:description" content="Hire Bo Botty, Your AI Business Partner. Automate your operations, connect your tools, and focus on what drives revenue.">
-    <meta property="og:image" content="https://aibizlutions.com/logo-t.png">
-    <meta property="og:image:alt" content="AI Bizlutions logo">
+    <meta property="og:image" content="https://aibizlutions.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Bo Botty — your AI business partner">
     <meta property="og:url" content="https://aibizlutions.com">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AI Bizlutions | Bo Botty, Your AI Business Partner">
-    <meta name="twitter:description" content="Hire Bo Botty, Your AI Business Partner. Automate your operations and grow with confidence.">
-    <meta name="twitter:image" content="https://aibizlutions.com/logo-t.png">
-    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <meta name="twitter:description" content="Meet Bo Botty. Automate the operational work your team shouldn't be doing — built for small teams.">
+    <meta name="twitter:image" content="https://aibizlutions.com/og-image.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn-uicons.flaticon.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Baloo+2:wght@800&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
@@ -32,7 +34,7 @@
         "@type": "Organization",
         "name": "AI Bizlutions LLC",
         "url": "https://aibizlutions.com",
-        "logo": "https://aibizlutions.com/logo-t.png",
+        "logo": "https://aibizlutions.com/ai-bizlutions.svg",
         "description": "AI Bizlutions helps businesses automate operations, connect tools, and grow with confidence through Bo Botty, your AI business partner.",
         "email": "support@aibizlutions.com",
         "telephone": "+1-602-560-9492",
@@ -95,7 +97,7 @@
 
     <header id="header">
         <div class="container nav-content">
-            <h1 class="logo"><a href="/"><img src="logo-t.png" width="120px" alt="AI Bizlutions LLC Logo"></a></h1>
+            <a href="/" class="logo" aria-label="AI Bizlutions home"><img src="ai-bizlutions.svg" alt="AI Bizlutions" height="90"></a>
 
             <nav id="nav-menu">
                 <a href="#services">Solutions</a>
@@ -109,15 +111,39 @@
 
     <section id="hero" class="hero-section">
         <div class="container">
-            <div class="hero-content">
-                <h2 class="animate-on-scroll">Hire Bo Botty,<br><span class="highlight">Your AI Business Partner.</span></h2>
-                <p class="animate-on-scroll delay-1">Bo Botty handles the operational work your team shouldn't be doing manually - from intake and follow-ups to scheduling and reporting - so you can focus on growing your business.<br><strong>Beta launching soon.</strong></p>
-                <div class="hero-cta-group animate-on-scroll delay-2">
-                    <a href="#contact" class="btn btn-primary">Apply for Beta Access</a>
-                    <a href="#services" class="btn btn-secondary">See What Bo Botty Does</a>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1 class="animate-on-scroll hero-headline">Get <span class="highlight">10+ hours</span><br>of admin work<br><span class="highlight">off your team's plate!</span></h1>
+                    <p class="animate-on-scroll delay-1">Bo Botty is your AI business partner — handling intake, follow-ups, scheduling, and reporting on autopilot, so your team can focus on what actually grows revenue.<br><strong>Beta launching soon.</strong></p>
+                    <div class="hero-cta-group animate-on-scroll delay-2">
+                        <a href="#contact" class="btn btn-primary">Apply for Beta Access</a>
+                        <a href="#services" class="btn btn-secondary">See What Bo Botty Does</a>
+                    </div>
+                    <form id="email-stub" class="email-stub animate-on-scroll delay-2"
+                          action="https://formsubmit.co/support@aibizlutions.com" method="POST">
+                        <input type="hidden" name="_subject" value="Bo Botty Waitlist Signup">
+                        <input type="hidden" name="_autoresponse" value="Thanks for joining the Bo Botty waitlist! We'll email you the moment beta opens.">
+                        <label for="stub-email" class="visually-hidden">Email address</label>
+                        <input id="stub-email" type="email" name="Email" placeholder="you@company.com" required>
+                        <button type="submit" class="btn btn-primary">Notify me</button>
+                        <p class="email-stub-note">No spam — one email when beta opens.</p>
+                    </form>
+                    <div id="email-stub-success" class="email-stub-success" role="status" aria-live="polite" hidden>
+                        <i class="fi fi-sr-check-circle"></i> You're on the list. We'll be in touch.
+                    </div>
+                </div>
+                <div class="hero-bo animate-on-scroll delay-1" aria-hidden="true">
+                    <img src="bo-reveal.svg" alt="" class="hero-bo-img">
                 </div>
             </div>
-            </div>
+        </div>
+    </section>
+
+    <section id="social-proof" class="social-proof-strip" aria-label="Social proof">
+        <div class="container social-proof-content">
+            <p class="social-proof-headline"><i class="fi fi-sr-rocket"></i> Joining the waitlist alongside ambitious small teams.</p>
+            <p class="social-proof-sub">Spots are limited — early applicants get hands-on onboarding from our founders.</p>
+        </div>
     </section>
 
     <section id="services" class="section services-section">
@@ -129,7 +155,7 @@
                     <div class="icon-wrapper">
                         <i class="fi fi-sr-brain-circuit icon"></i>
                     </div>
-                    <h4>Smart Task Automation</h4>
+                    <h4>Automates the work you hate.</h4>
                     <p class="service-description">Bo Botty takes over the repetitive work that slows your team down — client intake, follow-ups, scheduling, and document handling — so your people can spend time on what actually moves the business forward.</p>
                     <ul class="service-benefits">
                         <li><i class="fi fi-rr-bolt benefit-icon"></i> Handles intake, follow-ups, and scheduling</li>
@@ -141,7 +167,7 @@
                     <div class="icon-wrapper">
                         <i class="fi fi-sr-link-alt icon"></i>
                     </div>
-                    <h4>Connects Your Tools</h4>
+                    <h4>One workflow, every tool.</h4>
                     <p class="service-description">Stop bouncing between tabs and copying data from one system to another. Bo Botty links your existing tools into one unified workflow — your CRM, email, calendar, and more — all talking to each other automatically.</p>
                     <ul class="service-benefits">
                         <li><i class="fi fi-rr-refresh benefit-icon"></i> Syncs with your CRM, email, and calendar</li>
@@ -153,7 +179,7 @@
                     <div class="icon-wrapper">
                         <i class="fi fi-sr-chart-line-up icon"></i>
                     </div>
-                    <h4>See What's Working</h4>
+                    <h4>Know what's actually working.</h4>
                     <p class="service-description">No more guessing or waiting for end-of-month reports. Bo Botty gives you a clear picture of where your time and money go — so you can double down on what's working and fix what isn't.</p>
                     <ul class="service-benefits">
                         <li><i class="fi fi-rr-chart-histogram benefit-icon"></i> Know where your time and money go</li>
@@ -298,15 +324,9 @@
             
             <div class="about-content">
                 <div class="about-text animate-on-scroll">
-                    <p class="about-intro">AI Bizlutions exists to close the operational gap between small businesses and large enterprises. Large corporations consistently outperform smaller businesses not because they work harder, but because they operate with better systems.</p>
-                    
-                    <p class="about-summary hide-mobile">They use automation, integrated workflows, and AI-driven processes to move faster, respond sooner, and eliminate friction at scale - advantages most small and mid-sized businesses simply do not have access to.</p>
+                    <p class="about-intro">Big companies outperform small ones not because they work harder — they operate with better systems. We built Bo Botty to bring those same systems to growing teams, so the operational gap stops being a tax you pay for being small.</p>
 
-                    <p class="about-summary hide-mobile">We built AI Bizlutions to change that dynamic.</p>
-
-                    <p class="about-summary hide-mobile">Bo Botty, Your AI Business Partner, was created to bring those same capabilities into everyday business operations - embedding automation directly into how companies already work, so repetitive tasks are handled, follow-up is consistent, and systems improve over time through use.</p>
-
-                    <p class="about-summary hide-mobile">The goal is not to add another layer of software. It is to close the gap - giving growing businesses access to the same operational leverage that has historically been reserved for those with the budgets of enterprise organizations.</p>
+                    <p class="about-summary hide-mobile">Want the full backstory? Two founders, one frustration, and a decade of building AI for businesses that needed it most.</p>
                     
                     <div class="about-cta">
                         <button id="openStoryModal" class="btn btn-secondary-light">Read Our Full Story <i class="fi fi-rr-arrow-right"></i></button>
@@ -487,6 +507,9 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+            <div class="center-text">
+                <a href="#contact" class="btn btn-primary btn-large animate-on-scroll">Apply for Beta Access</a>
             </div>
         </div>
     </section>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 150" fill="none">
+  <defs>
+    <radialGradient id="abh" cx="40%" cy="30%" r="80%"><stop offset="0%" stop-color="#ffffff"/><stop offset="65%" stop-color="#f4f8fb"/><stop offset="100%" stop-color="#d8e4ef"/></radialGradient>
+    <linearGradient id="abv" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#16202f"/><stop offset="100%" stop-color="#070b12"/></linearGradient>
+    <radialGradient id="abe" cx="35%" cy="30%" r="80%"><stop offset="0%" stop-color="#b9f8ff"/><stop offset="55%" stop-color="#5ce8f7"/><stop offset="100%" stop-color="#0fb5cf"/></radialGradient>
+  </defs>
+  <!-- AI cluster — scaled to 80%, centered over the wordmark (x=92), baseline at y=88 -->
+  <g transform="translate(28.6 17.6) scale(0.8)">
+  <!-- "A" — white shell + thin sky outline, matching Bo's head -->
+  <text x="56" y="88" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="86" fill="url(#abh)" stroke="#0ea5e9" stroke-width="15" paint-order="stroke">A</text>
+  <!-- "i" stem — slim pill centered under the head; halo brings visual width to ~31 -->
+  <rect x="112.5" y="54" width="16" height="34" rx="8" fill="url(#abh)" stroke="#0ea5e9" stroke-width="15" paint-order="stroke"/>
+  <!-- Bo's head = the dot of the "i" -->
+  <svg x="98" y="10" width="45" height="43" viewBox="58 14 124 118" overflow="visible">
+    <rect x="64" y="69" width="9" height="23" rx="4.5" fill="#0ea5e9"/>
+    <rect x="167" y="69" width="9" height="23" rx="4.5" fill="#0ea5e9"/>
+    <path d="M120 25 C152 25 169 48 169 79 C169 109 148 127 120 127 C92 127 71 109 71 79 C71 48 88 25 120 25 Z" fill="url(#abh)" stroke="#c3d3e2" stroke-opacity="0.8"/>
+    <ellipse cx="101" cy="43" rx="23" ry="10" fill="#ffffff" opacity="0.55"/>
+    <rect x="83" y="55" width="74" height="51" rx="25.5" fill="url(#abv)"/>
+    <ellipse cx="103" cy="80" rx="9.7" ry="14" fill="url(#abe)" transform="rotate(-8 103 80)"/>
+    <ellipse cx="137" cy="80" rx="9.7" ry="14" fill="url(#abe)" transform="rotate(8 137 80)"/>
+    <circle cx="100" cy="72.5" r="3" fill="#ffffff" opacity="0.95"/>
+    <circle cx="133" cy="72.5" r="3" fill="#ffffff" opacity="0.95"/>
+    <path d="M109 97 Q120 102.5 131 97" stroke="#22d3ee" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <g transform="translate(96 38) rotate(-15) scale(0.69)">
+      <path d="M-2 3 C-6 9 -8 14 -7 19 C-4 17 -1 10 1 4 Z" fill="#0284c7"/>
+      <path d="M2 3 C6 9 8 14 7 19 C4 17 1 10 -1 4 Z" fill="#0284c7"/>
+      <path d="M-3 0 C-15 -11 -24 -1 -12 8 C-7 11 -3 6 -3 0 Z" fill="#0ea5e9"/>
+      <path d="M3 0 C15 -11 24 -1 12 8 C7 11 3 6 3 0 Z" fill="#0ea5e9"/>
+      <rect x="-4" y="-2.5" width="8" height="9" rx="2.5" fill="#0284c7"/>
+    </g>
+  </svg>
+  </g>
+  <!-- "Bizlutions" (navy for light backgrounds) -->
+  <text x="92" y="132" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="27" letter-spacing="-0.5" fill="#0f172a">Bizlutions</text>
+</svg>

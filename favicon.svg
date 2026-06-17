@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <radialGradient id="fbh" cx="40%" cy="30%" r="80%"><stop offset="0%" stop-color="#ffffff"/><stop offset="65%" stop-color="#f4f8fb"/><stop offset="100%" stop-color="#d8e4ef"/></radialGradient>
+    <linearGradient id="fbv" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#16202f"/><stop offset="100%" stop-color="#070b12"/></linearGradient>
+    <radialGradient id="fbe" cx="35%" cy="30%" r="80%"><stop offset="0%" stop-color="#b9f8ff"/><stop offset="55%" stop-color="#5ce8f7"/><stop offset="100%" stop-color="#0fb5cf"/></radialGradient>
+  </defs>
+  <!-- tab tile: white Bo pops on any browser theme -->
+  <rect width="64" height="64" rx="14" fill="#0f172a"/>
+  <svg x="3" y="3" width="58" height="58" viewBox="58 14 124 118">
+    <rect x="64" y="69" width="9" height="23" rx="4.5" fill="#0ea5e9"/>
+    <rect x="167" y="69" width="9" height="23" rx="4.5" fill="#0ea5e9"/>
+    <path d="M120 25 C152 25 169 48 169 79 C169 109 148 127 120 127 C92 127 71 109 71 79 C71 48 88 25 120 25 Z" fill="url(#fbh)"/>
+    <ellipse cx="101" cy="43" rx="23" ry="10" fill="#ffffff" opacity="0.55"/>
+    <rect x="83" y="55" width="74" height="51" rx="25.5" fill="url(#fbv)"/>
+    <ellipse cx="103" cy="80" rx="9.7" ry="14" fill="url(#fbe)" transform="rotate(-8 103 80)"/>
+    <ellipse cx="137" cy="80" rx="9.7" ry="14" fill="url(#fbe)" transform="rotate(8 137 80)"/>
+    <circle cx="100" cy="72.5" r="3" fill="#ffffff" opacity="0.95"/>
+    <circle cx="133" cy="72.5" r="3" fill="#ffffff" opacity="0.95"/>
+    <path d="M109 97 Q120 102.5 131 97" stroke="#22d3ee" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <g transform="translate(96 38) rotate(-15) scale(0.69)">
+      <path d="M-3 0 C-15 -11 -24 -1 -12 8 C-7 11 -3 6 -3 0 Z" fill="#0ea5e9"/>
+      <path d="M3 0 C15 -11 24 -1 12 8 C7 11 3 6 3 0 Z" fill="#0ea5e9"/>
+      <rect x="-4" y="-2.5" width="8" height="9" rx="2.5" fill="#0284c7"/>
+    </g>
+  </svg>
+</svg>
