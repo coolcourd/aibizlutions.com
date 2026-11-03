@@ -68,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const modals = {
         story: document.getElementById('storyModal'),
         chase: document.getElementById('chaseModal'),
-        courd: document.getElementById('courdModal'),
         managed: document.getElementById('managedModal'),
         enterprise: document.getElementById('enterpriseModal')
     };
@@ -76,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const openButtons = {
         story: document.getElementById('openStoryModal'),
         chase: document.getElementById('openChaseModal'),
-        courd: document.getElementById('openCourdModal'),
         managed: document.getElementById('openManagedModal'),
         enterprise: document.getElementById('openEnterpriseModal')
     };

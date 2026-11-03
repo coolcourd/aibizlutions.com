@@ -174,7 +174,7 @@ Test every interactive element. See [test-interactions.md](./references/test-int
 **Quick summary:**
 - Click each nav link → verify smooth scroll to correct section
 - Open/close hamburger menu on mobile
-- Open each modal (Story, Chase, Courd) → verify close via X button, backdrop click, Escape key
+- Open each modal (Story, Chase) → verify close via X button, backdrop click, Escape key
 - Test contact form tab order and validation
 - Verify all anchor links work
 

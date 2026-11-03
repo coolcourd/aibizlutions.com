@@ -141,21 +141,6 @@ playwright-cli screenshot --filename=modal-chase-closed.png
 
 **Verify:** Same checks as Story Modal.
 
-## Modal Testing — Courd Modal
-
-```bash
-playwright-cli click "a[href='#about']"
-playwright-cli click "#openCourdModal"
-playwright-cli screenshot --filename=modal-courd-open.png
-playwright-cli snapshot "#courdModal"
-
-# Close via X
-playwright-cli click "#courdModal .modal-close"
-playwright-cli screenshot --filename=modal-courd-closed.png
-```
-
-**Verify:** Same checks as Story Modal.
-
 ## Modal Testing on Mobile
 
 Repeat modal tests at mobile viewport:

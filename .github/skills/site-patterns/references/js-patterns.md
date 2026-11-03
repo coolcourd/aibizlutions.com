@@ -27,8 +27,7 @@ Find this block in `script.js`:
 ```javascript
 const modals = {
     story: document.getElementById('storyModal'),
-    chase: document.getElementById('chaseModal'),
-    courd: document.getElementById('courdModal')
+    chase: document.getElementById('chaseModal')
 };
 ```
 
@@ -37,7 +36,6 @@ Add your new modal:
 const modals = {
     story: document.getElementById('storyModal'),
     chase: document.getElementById('chaseModal'),
-    courd: document.getElementById('courdModal'),
     newname: document.getElementById('newnameModal')  // ← add here
 };
 ```
@@ -48,8 +46,7 @@ Find this block:
 ```javascript
 const openButtons = {
     story: document.getElementById('openStoryModal'),
-    chase: document.getElementById('openChaseModal'),
-    courd: document.getElementById('openCourdModal')
+    chase: document.getElementById('openChaseModal')
 };
 ```
 
@@ -58,7 +55,6 @@ Add the trigger button:
 const openButtons = {
     story: document.getElementById('openStoryModal'),
     chase: document.getElementById('openChaseModal'),
-    courd: document.getElementById('openCourdModal'),
     newname: document.getElementById('openNewnameModal')  // ← add here
 };
 ```

@@ -89,8 +89,8 @@ All JS runs inside `document.addEventListener('DOMContentLoaded', () => { ... })
 - Each element observed once (unobserved after trigger)
 
 ### Modals
-- Modal elements: `#storyModal`, `#chaseModal`, `#courdModal`
-- Open buttons: `#openStoryModal`, `#openChaseModal`, `#openCourdModal`
+- Modal elements: `#storyModal`, `#chaseModal`
+- Open buttons: `#openStoryModal`, `#openChaseModal`
 - Close via `.modal-close` buttons, backdrop click, or Escape key
 - Body scroll locked when modal open (`overflow: hidden`)
 
@@ -112,7 +112,7 @@ All JS runs inside `document.addEventListener('DOMContentLoaded', () => { ... })
 4. Add nav link if the section should be navigable
 
 ### Images & Assets
-- Images referenced from root: brand kit (`bo-botty-wordmark.svg`, `bo-mascot-full.svg`, `bo-reveal.svg`, `bo-head-sad.svg`, `bo-botty.svg`, `ai-bizlutions.svg`, `favicon.svg`, `og-image.png`) + team photos (`chase.jpeg`, `courd.jpg`). The old `logo-t.png` / `favicon.png` raster files are retired — never re-introduce. The full source brand kit lives in the main app repo at `AI-Bizlutions-/public/Assets/Logos/`.
+- Images referenced from root: brand kit (`bo-botty-wordmark.svg`, `bo-mascot-full.svg`, `bo-reveal.svg`, `bo-head-sad.svg`, `bo-botty.svg`, `ai-bizlutions.svg`, `favicon.svg`, `og-image.png`) + team photo (`chase.jpeg`). The old `logo-t.png` / `favicon.png` raster files are retired — never re-introduce. The full source brand kit lives in the main app repo at `AI-Bizlutions-/public/Assets/Logos/`.
 - All images need `alt` text
 - Use `width` attribute on `<img>` where appropriate for layout stability
 

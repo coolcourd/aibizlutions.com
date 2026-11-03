@@ -128,7 +128,7 @@ Test at:
 Test every interactive element:
 - **Navigation links**: Click each, verify scroll to correct section
 - **Hamburger menu** (at mobile): Open, close, verify icon swap, verify link clicks close menu
-- **Modals**: Open Story/Chase/Courd modals → test close via X button, Escape, backdrop click
+- **Modals**: Open Story/Chase modals → test close via X button, Escape, backdrop click
 - **Hero CTAs**: Test both "Book Your Free Consult" and "See Our Solutions"
 - **Contact form**: Tab order, field focus, validation
 
@@ -252,7 +252,7 @@ This breakpoint gets a dedicated deep audit. Mobile is where UX failures are mos
 - **Color usage**: All colors reference CSS custom properties from `:root` — no hardcoded values
 - **Section rhythm**: Alternating light/dark sections create visual rhythm
 - **Card patterns**: Service cards, team member cards use consistent styling
-- **Modal patterns**: Title, body, close button. Consistent across all modals (story, Chase, Courd)
+- **Modal patterns**: Title, body, close button. Consistent across all modals (story, Chase)
 - **Icon consistency**: Flaticon classes used consistently (`fi-sr-` for solid, `fi-rr-` for regular)
 
 ### 6. Edge Cases & Stress
