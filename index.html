@@ -487,49 +487,14 @@
             <h3 class="section-title animate-on-scroll">Apply for Beta Access</h3>
             <p class="section-subtitle-contact animate-on-scroll delay-1">Bo Botty is entering beta. We're looking for a small group of businesses to help shape the product. Apply below and we'll be in touch.</p>
             
-            <div class="contact-grid">
+            <div class="contact-grid contact-grid--stacked">
                 <div class="form-wrapper">
-                <!-- Beta applications go straight into the Bo Botty CRM as Leads tagged beta-test.
-                     The token is the "Beta Applications" form's public token (Forms > Share > Link, the
-                     long code at the end). Tags, notifications and the auto-reply are set on that form
-                     in the app, not here. -->
-                <form id="contact-form" class="contact-form animate-on-scroll delay-2"
-                    action="https://95v8fuisdh.execute-api.us-east-2.amazonaws.com/prod/api/public/forms/e6382a8f069bdc4478b35340f68e5e58aaaaceeaeacea248be14b3d9b92f825e/submit"
-                    method="POST">
-
-                    <div aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden;">
-                        <label for="hp-company">Leave this empty</label>
-                        <input type="text" id="hp-company" name="_hp" tabindex="-1" autocomplete="off">
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name"><i class="fi fi-rr-user"></i> Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="John Smith" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email"><i class="fi fi-rr-envelope"></i> Email</label>
-                            <input type="email" id="email" name="email" placeholder="john@company.com" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="qualifications"><i class="fi fi-rr-comment-alt"></i> Why are you a good candidate for the Beta?</label>
-                        <textarea id="qualifications" name="qualifications" placeholder="List prior experience and qualifications..." required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-submit">
-                        <span>Apply for Beta</span>
-                        <i class="fi fi-rr-arrow-right"></i>
-                    </button>
-                </form>
-
-                <div id="form-success" class="form-success-message" role="status" aria-live="polite" style="display: none;">
-                    <i class="fi fi-sr-check-circle"></i>
-                    <h4>Application Received!</h4>
-                    <p>Thank you for applying to the Bo Botty beta. We'll review your application and follow up within a few days.</p>
-                </div>
+                <!-- The beta form is the real "Beta Test Application" form from the Bo Botty app, embedded.
+                     Edit its questions, tags, notifications and auto-reply in the app (Forms); the site
+                     picks the changes up with no code change here. -->
+                <iframe class="beta-form-embed animate-on-scroll delay-2"
+                    src="https://app.aibizlutions.com/form/ai-bizlutions-llc--e6382a8f069bdc4478b35340f68e5e58aaaaceeaeacea248be14b3d9b92f825e"
+                    title="Apply for Bo Botty beta access" loading="lazy"></iframe>
                 </div>
 
                 <div class="contact-info-compact animate-on-scroll delay-3">

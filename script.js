@@ -323,3 +323,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Beta form embed: the Bo Botty form page reports its own height (once it is on a release with
+// embed support), so the frame fits it exactly. Until then the CSS height is the fallback.
+(function () {
+    const frame = document.querySelector('.beta-form-embed');
+    if (!frame) return;
+    window.addEventListener('message', (e) => {
+        if (e.origin !== 'https://app.aibizlutions.com' || e.source !== frame.contentWindow) return;
+        const d = e.data;
+        if (!d || d.type !== 'aib-form-height') return;
+        const h = Number(d.height);
+        if (Number.isFinite(h) && h > 100 && h < 6000) {
+            frame.style.height = Math.ceil(h) + 'px';
+        }
+    });
+})();

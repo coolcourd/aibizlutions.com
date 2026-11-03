@@ -2389,3 +2389,26 @@ footer a:hover {
     .social-proof-headline { font-size: 0.95em; }
     .social-proof-sub { font-size: 0.82em; }
 }
+
+/* Beta form: the real Bo Botty form, embedded. The app page does not report its height, so the
+   frame is sized to fit the current four questions without an inner scrollbar. */
+.beta-form-embed {
+    display: block;
+    width: 100%;
+    height: 1080px;
+    border: 0;
+    border-radius: 16px;
+    background: transparent;
+}
+@media (max-width: 640px) {
+    .beta-form-embed { height: 1250px; }
+}
+
+/* The embedded form needs room: stack it full width (centred, capped) above the contact strip
+   instead of squeezing it into the left column of the two-column grid. */
+.contact-grid--stacked {
+    grid-template-columns: 1fr;
+    max-width: 820px;
+    margin: 0 auto;
+    gap: 24px;
+}
