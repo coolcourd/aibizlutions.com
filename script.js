@@ -139,21 +139,13 @@ document.addEventListener('DOMContentLoaded', () => {
             submitText.textContent = 'Sending…';
 
             const formData = new FormData(contactForm);
+            const entered = {
+                name: String(formData.get('name') || '').trim(),
+                email: String(formData.get('email') || '').trim(),
+                qualifications: String(formData.get('qualifications') || '').trim()
+            };
 
-            fetch(contactForm.action, {
-                method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            })
-            .then(response => {
-                if (response.ok || response.status === 200) {
-                    contactForm.style.display = 'none';
-                    formSuccess.style.display = 'block';
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            })
-            .catch(() => {
+            const showError = (message) => {
                 submitBtn.classList.remove('is-loading');
                 submitText.textContent = originalText;
                 const existing = contactForm.querySelector('.form-error');
@@ -161,8 +153,92 @@ document.addEventListener('DOMContentLoaded', () => {
                 const errorBlock = document.createElement('div');
                 errorBlock.className = 'form-error';
                 errorBlock.setAttribute('role', 'alert');
-                errorBlock.innerHTML = '<img src="bo-head-sad.svg" alt=""><span>Sorry, that didn’t go through. Please try again or email <a href="mailto:support@aibizlutions.com">support@aibizlutions.com</a> directly.</span>';
+                errorBlock.innerHTML = '<img src="bo-head-sad.svg" alt=""><span></span>';
+                const text = errorBlock.querySelector('span');
+                if (message) {
+                    text.appendChild(document.createTextNode(message + ' Questions? Email '));
+                } else {
+                    text.appendChild(document.createTextNode('Sorry, that didn’t go through. Please try again or email '));
+                }
+                const mail = document.createElement('a');
+                mail.href = 'mailto:support@aibizlutions.com';
+                mail.textContent = 'support@aibizlutions.com';
+                text.appendChild(mail);
+                text.appendChild(document.createTextNode(' directly.'));
                 contactForm.appendChild(errorBlock);
+            };
+
+            // The submit URL carries the Beta Applications form's public token. Until the real
+            // token is pasted in, keep sending applications by email exactly as the site did
+            // before the CRM hookup, so the form never stops working in between.
+            const submitUrl = contactForm.action;
+            if (/BETA_FORM_TOKEN/.test(submitUrl)) {
+                const legacy = new FormData();
+                legacy.append('_subject', 'Bo Botty Beta Application');
+                legacy.append('_autoresponse', 'Thank you for applying to the Bo Botty beta! We’ll review your application and follow up within a few days.');
+                legacy.append('Name', entered.name);
+                legacy.append('Email', entered.email);
+                legacy.append('Beta Qualifications', entered.qualifications);
+                fetch('https://formsubmit.co/support@aibizlutions.com', {
+                    method: 'POST',
+                    body: legacy,
+                    headers: { 'Accept': 'application/json' }
+                })
+                .then(response => {
+                    if (!response.ok) throw new Error('');
+                    contactForm.style.display = 'none';
+                    formSuccess.style.display = 'block';
+                })
+                .catch(() => showError(''));
+                return;
+            }
+
+            // The app gives each form field a random id, so ask the form for its layout and
+            // match our three boxes by field type: the email field, a text field labelled
+            // "name", and the long-answer field. Answers under any other key are dropped
+            // by the server, so this mapping is what makes the answers land in the CRM.
+            const definitionUrl = submitUrl.replace(/\/submit\/?$/, '');
+            fetch(definitionUrl, { headers: { 'Accept': 'application/json' } })
+            .then(response => response.json().catch(() => ({})).then(body => ({ response, body })))
+            .then(({ response, body }) => {
+                if (!response.ok || body.success === false || !body.data) {
+                    throw new Error((body.error && body.error.message) || '');
+                }
+                const fields = (body.data.fields || []).filter(f => f && f.fieldId);
+                const used = new Set();
+                const pick = (test) => {
+                    const f = fields.find(x => !used.has(x.fieldId) && test(x));
+                    if (f) used.add(f.fieldId);
+                    return f;
+                };
+                const emailField = pick(f => f.type === 'email');
+                const nameField = pick(f => f.type === 'text' && /name/i.test(f.label || '')) || pick(f => f.type === 'text');
+                const qualField = pick(f => f.type === 'textarea') || pick(f => f.type === 'text');
+
+                const responses = {};
+                if (nameField) responses[nameField.fieldId] = entered.name;
+                if (emailField) responses[emailField.fieldId] = entered.email;
+                if (qualField) responses[qualField.fieldId] = entered.qualifications;
+
+                return fetch(submitUrl, {
+                    method: 'POST',
+                    body: JSON.stringify({ responses, contactName: entered.name, contactEmail: entered.email, _hp: formData.get('_hp') || '' }),
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
+                });
+            })
+            .then(response => response.json().catch(() => ({})).then(body => ({ response, body })))
+            .then(({ response, body }) => {
+                if (response.ok && body.success !== false) {
+                    contactForm.style.display = 'none';
+                    formSuccess.style.display = 'block';
+                } else {
+                    throw new Error((body.error && body.error.message) || '');
+                }
+            })
+            .catch((err) => {
+                // A 4xx from the form server carries a sentence meant for the visitor
+                // ("You have already submitted this form."); network failures do not.
+                showError(err && err.message && !/fetch|network|load/i.test(err.message) ? err.message : '');
             });
         });
     }
