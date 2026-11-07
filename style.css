@@ -2412,3 +2412,23 @@ footer a:hover {
     margin: 0 auto;
     gap: 24px;
 }
+
+/* Hero: "Meet Bo Botty / Your AI Business Partner!" is the headline; the CRM line under it is a
+   smaller tagline so the block stays three-ish lines instead of five. */
+.hero-headline .hero-tagline {
+    display: block;
+    font-size: 0.6em;
+    line-height: 1.2;
+    margin-top: 0.35em;
+}
+.hero-headline .hero-sub {
+    font-size: 0.82em;
+}
+@media (min-width: 1280px) {
+    .hero-headline .hero-sub { white-space: nowrap; }
+}
+.hero-headline .hero-sub,
+.hero-headline .hero-tagline {
+    display: block;
+    text-wrap: balance;
+}
