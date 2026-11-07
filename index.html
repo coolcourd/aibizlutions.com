@@ -67,7 +67,7 @@
         "@type": "SoftwareApplication",
         "name": "Bo Botty",
         "applicationCategory": "BusinessApplication",
-        "description": "Bo Botty handles the operational work your team shouldn't be doing manually — from intake and follow-ups to scheduling and reporting — so you can focus on growing your business.",
+        "description": "Bo Botty builds your brand, drafts and posts your social media once you approve it, follows up with your leads, and sends quotes and invoices, so you can focus on growing your business.",
         "operatingSystem": "Web",
         "offers": {
             "@type": "Offer",
@@ -104,7 +104,7 @@
                 <a href="https://app.aibizlutions.com">Sign in</a>
                 <a href="#contact" class="cta-nav-link">Join the Beta</a>
             </nav>
-            <div class="menu-toggle" id="mobile-menu">☰</div>
+            <button type="button" class="menu-toggle" id="mobile-menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">☰</button>
         </div>
     </header>
 
@@ -123,9 +123,9 @@
                         <input type="hidden" name="_subject" value="Bo Botty Waitlist Signup">
                         <input type="hidden" name="_autoresponse" value="Thanks for joining the Bo Botty waitlist! We'll email you the moment beta opens.">
                         <label for="stub-email" class="visually-hidden">Email address</label>
-                        <input id="stub-email" type="email" name="Email" placeholder="you@company.com" required>
-                        <button type="submit" class="btn btn-primary">Notify me</button>
-                        <p class="email-stub-note">No spam — one email when beta opens.</p>
+                        <input id="stub-email" type="email" name="Email" placeholder="you@email.com" required>
+                        <button type="submit" class="btn btn-secondary">Notify me</button>
+                        <p class="email-stub-note">Not ready to apply yet? Leave your email and we'll send one note when beta opens. Nothing else. <a href="https://app.aibizlutions.com/privacy-policy.html">Privacy Policy</a></p>
                     </form>
                     <div id="email-stub-success" class="email-stub-success" role="status" aria-live="polite" hidden>
                         <i class="fi fi-sr-check-circle"></i> You're on the list. We'll be in touch.
@@ -140,7 +140,7 @@
 
     <section id="social-proof" class="social-proof-strip" aria-label="Social proof">
         <div class="container social-proof-content">
-            <p class="social-proof-headline"><i class="fi fi-sr-rocket"></i> Joining the waitlist alongside ambitious small teams.</p>
+            <p class="social-proof-headline"><i class="fi fi-sr-rocket"></i> Beta applications are open, for new and growing businesses alike.</p>
             <p class="social-proof-sub">Spots are limited — early applicants get hands-on onboarding from our founder.</p>
         </div>
     </section>
@@ -155,11 +155,11 @@
                         <i class="fi fi-sr-megaphone icon"></i>
                     </div>
                     <h4>Marketing that runs itself.</h4>
-                    <p class="service-description">Bo Botty learns your business from your website and builds your brand. Then it writes a week of social posts, pictures included, and posts them for you. You approve what goes out, and Bo answers the comments that come in.</p>
+                    <p class="service-description">Bo Botty learns your business from your website, or from a few sentences if you're just starting out, and builds your brand. Then it writes a week of social posts, pictures included, ready for you to approve. Bo helps you answer the comments that come in.</p>
                     <ul class="service-benefits">
                         <li><i class="fi fi-rr-palette benefit-icon"></i> Builds your brand look and voice for you</li>
-                        <li><i class="fi fi-rr-calendar-check benefit-icon"></i> Plans and posts your social media</li>
-                        <li><i class="fi fi-rr-comment-check benefit-icon"></i> Replies to comments on your posts</li>
+                        <li><i class="fi fi-rr-calendar-check benefit-icon"></i> Plans your posts and publishes them once you approve</li>
+                        <li><i class="fi fi-rr-comment-check benefit-icon"></i> Helps you reply to comments on your posts</li>
                     </ul>
                 </div>
                 <div class="service-card animate-on-scroll delay-1">
@@ -167,7 +167,7 @@
                         <i class="fi fi-sr-user-add icon"></i>
                     </div>
                     <h4>Every lead, followed up.</h4>
-                    <p class="service-description">Leads from your website forms land straight in your contact list, along with where they came from. Bo Botty sends the follow-up emails and keeps every conversation in one place, so nobody falls through the cracks.</p>
+                    <p class="service-description">Leads from your website forms land straight in your contact list, along with where they came from. Bo Botty drafts the follow-up emails, sends them with your OK, and keeps every conversation in one place, so nobody falls through the cracks.</p>
                     <ul class="service-benefits">
                         <li><i class="fi fi-rr-form benefit-icon"></i> Website forms that fill your contact list</li>
                         <li><i class="fi fi-rr-envelope benefit-icon"></i> Sends invoices, replies and campaigns from your own Gmail or Outlook account</li>
@@ -179,11 +179,11 @@
                         <i class="fi fi-sr-comments icon"></i>
                     </div>
                     <h4>Just tell Bo what you need.</h4>
-                    <p class="service-description">Type or say it in plain words: send a quote, invoice a customer, post this week's special. Bo Botty does the work and checks with you before anything goes out. No training, no setup manual.</p>
+                    <p class="service-description">Type or say it in plain words: send a quote, invoice a customer, post this week's special. Bo Botty does the work and asks you first before anything goes out. No training, no setup manual.</p>
                     <ul class="service-benefits">
                         <li><i class="fi fi-rr-file-invoice-dollar benefit-icon"></i> Quotes and invoices customers pay online</li>
                         <li><i class="fi fi-rr-comment-alt benefit-icon"></i> Ask in plain English, like texting an assistant</li>
-                        <li><i class="fi fi-rr-shield-check benefit-icon"></i> Checks with you before anything goes out</li>
+                        <li><i class="fi fi-rr-shield-check benefit-icon"></i> Asks before anything goes out, until you say otherwise</li>
                     </ul>
                 </div>
             </div>
@@ -301,6 +301,7 @@
                         </div>
                     </div>
 
+                    <p class="form-privacy-note">We use these details only to reply to your inquiry. <a href="https://app.aibizlutions.com/privacy-policy.html">Privacy Policy</a></p>
                     <button type="submit" class="btn btn-primary btn-submit">
                         <span>Submit Inquiry</span>
                         <i class="fi fi-rr-arrow-right"></i>
@@ -334,13 +335,13 @@
                     <div class="value-props">
                         <div class="value-prop">
                             <i class="fi fi-sr-puzzle-piece"></i>
-                            <h5>Full Integration</h5>
-                            <p>Embedded into your actual workflows</p>
+                            <h5>Start From Where You Are</h5>
+                            <p>Your website, your email, or just an idea</p>
                         </div>
                         <div class="value-prop">
                             <i class="fi fi-sr-headset"></i>
                             <h5>Ongoing Support</h5>
-                            <p>Continuous optimization over time</p>
+                            <p>Help from the people who built it</p>
                         </div>
                         <div class="value-prop">
                             <i class="fi fi-sr-arrow-trend-up"></i>
@@ -353,7 +354,7 @@
                 <div class="team-photos animate-on-scroll delay-1">
                     <div class="team-member">
                         <div class="team-photo">
-                            <img src="chase.jpeg" alt="Chase Headman - Operations Leader">
+                            <img src="chase-480.jpg" alt="Chase Headman - Operations Leader" width="480" height="688" loading="lazy" decoding="async">
                         </div>
                         <h4>Chase Headman</h4>
                         <p class="team-role">Operations & Strategy</p>
@@ -378,7 +379,7 @@
 
                 <p><strong>That imbalance is the whole reason AI Bizlutions exists.</strong></p>
 
-                <p>We built Bo Botty, Your AI Business Partner, to take the systems the big players use to win and put them in your hands. A real CRM, so no lead or customer ever slips through. A brand that is recognizably yours, the same everywhere a customer meets you, because people buy from names they recognize, and right now the chain is the name they recognize. Metrics that show you where the money is really coming from and where it is quietly leaking out. Social media that goes out every day whether or not you had time. Invoicing, scheduling, and the thousand small tasks that eat your evenings. And underneath all of it, the same AI the big players use, doing the work that used to take a department. All at a price you can actually pay, with no IT team and no six-month rollout.</p>
+                <p>We built Bo Botty, Your AI Business Partner, to take the systems the big players use to win and put them in your hands. A real CRM, so no lead or customer ever slips through. A brand that is recognizably yours, the same everywhere a customer meets you, because people buy from names they recognize, and right now the chain is the name they recognize. Metrics that show you where the money is really coming from and where it is quietly leaking out. Social media that keeps going out every day, planned ahead so a busy week doesn't stop it. Invoicing, scheduling, and the thousand small tasks that eat your evenings. And underneath all of it, the same AI the big players use, doing the work that used to take a department. All at a price you can actually pay, with no IT team and no six-month rollout.</p>
 
                 <p>We are not trying to turn you into a corporation. We are trying to give you a fighting chance against the ones that want you gone. The personal touch, the local knowledge, the care a chain can never fake: that is already yours. Bo Botty just makes sure you have the same tools they do.</p>
 
@@ -417,8 +418,8 @@
     </div>
     <section id="process" class="section process-section">
         <div class="container">
-            <h3 class="section-title animate-on-scroll">Up and Running in Minutes</h3>
-            <p class="section-subtitle animate-on-scroll">Getting started with Bo Botty, Your AI Business Partner, is simple</p>
+            <h3 class="section-title animate-on-scroll">Getting Started Is Simple</h3>
+            <p class="section-subtitle animate-on-scroll">Three steps from sign-up to your first week of posts</p>
             
             <div class="process-timeline">
                 <div class="process-step animate-on-scroll">
@@ -428,10 +429,10 @@
                     </div>
                     <div class="process-content">
                         <h4>Sign Up & Set Up</h4>
-                        <p>Create your account, tell Bo Botty about your business, and connect the tools you already use.</p>
+                        <p>Create your account and tell Bo Botty about your business. Got a website? Paste the address. Starting from scratch? Just describe your idea.</p>
                         <ul class="process-deliverables">
-                            <li><i class="fi fi-rr-check-circle"></i> Connect your CRM, calendar, and email</li>
-                            <li><i class="fi fi-rr-check-circle"></i> Set your preferences and priorities</li>
+                            <li><i class="fi fi-rr-check-circle"></i> Paste your website, or describe your idea</li>
+                            <li><i class="fi fi-rr-check-circle"></i> Choose how much Bo does without asking</li>
                             <li><i class="fi fi-rr-check-circle"></i> Free plan available — no credit card required</li>
                         </ul>
                     </div>
@@ -446,11 +447,11 @@
                     </div>
                     <div class="process-content">
                         <h4>Bo Botty Gets to Work</h4>
-                        <p>Your AI Business Partner starts handling tasks, learning your workflows, and surfacing insights — right away.</p>
+                        <p>Bo Botty builds your brand, drafts your first week of posts, and starts following up with your leads. You approve what goes out.</p>
                         <ul class="process-deliverables">
-                            <li><i class="fi fi-rr-check-circle"></i> Automates intake, follow-ups, and scheduling</li>
-                            <li><i class="fi fi-rr-check-circle"></i> Learns your patterns and gets smarter over time</li>
-                            <li><i class="fi fi-rr-check-circle"></i> Keeps your tools in sync automatically</li>
+                            <li><i class="fi fi-rr-check-circle"></i> Brand, posts and follow-ups drafted for you</li>
+                            <li><i class="fi fi-rr-check-circle"></i> You tap Approve, Bo handles the rest</li>
+                            <li><i class="fi fi-rr-check-circle"></i> Quotes and invoices whenever you ask</li>
                         </ul>
                     </div>
                 </div>
@@ -464,10 +465,10 @@
                     </div>
                     <div class="process-content">
                         <h4>Grow With Confidence</h4>
-                        <p>Review your dashboards, see what's working, and scale at your own pace — Bo Botty grows with you.</p>
+                        <p>Keep every lead and customer in one place and grow at your own pace. Bo Botty grows with you.</p>
                         <ul class="process-deliverables">
-                            <li><i class="fi fi-rr-check-circle"></i> Real-time dashboards show what matters</li>
-                            <li><i class="fi fi-rr-check-circle"></i> Optimize workflows as your business evolves</li>
+                            <li><i class="fi fi-rr-check-circle"></i> Every lead and customer in one list</li>
+                            <li><i class="fi fi-rr-check-circle"></i> Hand Bo more jobs as you grow</li>
                             <li><i class="fi fi-rr-check-circle"></i> Upgrade anytime for more power</li>
                         </ul>
                     </div>

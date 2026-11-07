@@ -2432,3 +2432,80 @@ footer a:hover {
     display: block;
     text-wrap: balance;
 }
+
+/* ── Go Loud review fixes (2026-11-07) ─────────────────────────────────────
+   Contrast: white on sky measured ~2.8:1 (fails AA). Dark ink on the same sky keeps the brand
+   colour and reads at ~7:1, the same treatment as the app's own buttons. */
+.btn-primary,
+.beta-banner,
+.beta-banner a,
+.beta-close {
+    color: #0B1220;
+}
+.cta-nav-link,
+.cta-nav-link:hover {
+    color: #0B1220 !important;
+}
+.btn-primary:hover,
+.cta-nav-link:hover {
+    background-color: #38BDF8;
+    border-color: #38BDF8;
+    color: #0B1220;
+}
+.beta-close {
+    min-width: 44px;
+    min-height: 44px;
+}
+
+/* Phone menu: a real button, 44px square, keyboard and screen-reader reachable. */
+button.menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    background: none;
+    border: 0;
+    color: var(--text-color);
+    font: inherit;
+    font-size: 1.5em;
+    line-height: 1;
+    cursor: pointer;
+}
+@media (max-width: 992px) {
+    button.menu-toggle { display: inline-flex; }
+}
+
+/* iOS zooms into any input under 16px on focus. */
+.email-stub input[type="email"] {
+    font-size: 16px;
+}
+.email-stub-note a,
+.form-privacy-note a {
+    color: inherit;
+    text-decoration: underline;
+}
+.form-privacy-note {
+    font-size: 0.85em;
+    opacity: 0.8;
+    margin: 4px 0 12px;
+}
+
+/* Motion: visitors who asked for less motion get the content without the fade/slide. */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .animate-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+/* First screen on small phones: Bo sits above the headline, so a smaller Bo and tighter top
+   padding bring "Apply for Beta Access" into view without scrolling. */
+@media (max-width: 600px) {
+    .hero-section { padding-top: 20px; }
+    .hero-bo-img { max-width: 120px; }
+    .hero-grid { gap: 12px; }
+}

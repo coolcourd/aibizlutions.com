@@ -6,7 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     mobileMenu.addEventListener('click', () => {
         navMenu.classList.toggle('active');
-        mobileMenu.textContent = navMenu.classList.contains('active') ? '✖' : '☰';
+        const open = navMenu.classList.contains('active');
+        mobileMenu.textContent = open ? '✖' : '☰';
+        mobileMenu.setAttribute('aria-expanded', String(open));
+        mobileMenu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     });
     
     // Close mobile menu when a link is clicked
@@ -15,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
                 mobileMenu.textContent = '☰';
+                mobileMenu.setAttribute('aria-expanded', 'false');
+                mobileMenu.setAttribute('aria-label', 'Open menu');
             }
         });
     });
