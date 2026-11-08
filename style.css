@@ -2241,7 +2241,7 @@ footer a:hover {
 }
 
 /* ────────────────────────────────────────────────────────────────────────── */
-/* Rebrand additions (2026-06): hero grid + Bo column, email stub,            */
+/* Rebrand additions (2026-06): hero grid + Bo column,                        */
 /* social-proof strip, accessible utilities, mobile typography floor.         */
 /* ────────────────────────────────────────────────────────────────────────── */
 
@@ -2286,54 +2286,6 @@ footer a:hover {
     .hero-bo { order: 0; justify-content: center; }
     .hero-bo-img { max-width: 420px; }
 }
-
-.email-stub {
-    margin-top: 24px;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 10px;
-    max-width: 480px;
-    align-items: stretch;
-    margin-left: auto;
-    margin-right: auto;
-}
-.email-stub input[type="email"] {
-    grid-column: 1 / 2;
-    padding: 12px 14px;
-    border-radius: 8px;
-    border: 1.5px solid rgba(255, 255, 255, 0.25);
-    background: rgba(255, 255, 255, 0.08);
-    color: var(--bo-white);
-    font-family: var(--font-family);
-    font-size: 0.95em;
-    outline: none;
-    transition: border-color 0.2s ease, background 0.2s ease;
-}
-.email-stub input[type="email"]::placeholder { color: rgba(255, 255, 255, 0.55); }
-.email-stub input[type="email"]:focus {
-    border-color: var(--bo-sky);
-    background: rgba(255, 255, 255, 0.14);
-    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.25);
-}
-.email-stub .btn {
-    grid-column: 2 / 3;
-    padding: 12px 22px;
-    white-space: nowrap;
-}
-.email-stub-note {
-    grid-column: 1 / -1;
-    margin: 4px 0 0 !important;
-    font-size: 0.78em !important;
-    color: rgba(255, 255, 255, 0.6) !important;
-    font-weight: 400 !important;
-}
-.email-stub-success {
-    margin-top: 16px;
-    color: var(--bo-cyan);
-    font-weight: 600;
-    font-size: 0.95em;
-}
-.email-stub-success i { margin-right: 6px; }
 
 .social-proof-strip {
     background: var(--bo-navy);
@@ -2380,11 +2332,6 @@ footer a:hover {
     body { font-size: 16px; }
     .hero-section h1, .hero-section h2 { font-size: 2.1em; }
     .hero-section p { font-size: 1em; color: rgba(255, 255, 255, 0.85); }
-    .email-stub {
-        grid-template-columns: 1fr;
-    }
-    .email-stub .btn { grid-column: 1 / -1; }
-    .email-stub-note { font-size: 0.8em !important; }
     .hero-bo-img { max-width: 220px; }
     .social-proof-headline { font-size: 0.95em; }
     .social-proof-sub { font-size: 0.82em; }
@@ -2477,11 +2424,6 @@ button.menu-toggle {
     button.menu-toggle { display: inline-flex; }
 }
 
-/* iOS zooms into any input under 16px on focus. */
-.email-stub input[type="email"] {
-    font-size: 16px;
-}
-.email-stub-note a,
 .form-privacy-note a {
     color: inherit;
     text-decoration: underline;

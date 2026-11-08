@@ -291,42 +291,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
-    // 7. Hero email-stub (waitlist signup) — re-uses FormSubmit endpoint.
-    const emailStub = document.getElementById('email-stub');
-    const emailStubSuccess = document.getElementById('email-stub-success');
-    if (emailStub) {
-        emailStub.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = emailStub.querySelector('button[type="submit"]');
-            const originalText = btn.textContent;
-            btn.disabled = true;
-            btn.textContent = 'Adding…';
-            fetch(emailStub.action, {
-                method: 'POST',
-                body: new FormData(emailStub),
-                headers: { 'Accept': 'application/json' }
-            })
-            .then(r => {
-                if (r.ok) {
-                    emailStub.style.display = 'none';
-                    if (emailStubSuccess) emailStubSuccess.hidden = false;
-                } else { throw new Error('stub fail'); }
-            })
-            .catch(() => {
-                btn.disabled = false;
-                btn.textContent = originalText;
-                const existing = emailStub.querySelector('.form-error');
-                if (existing) existing.remove();
-                const errorBlock = document.createElement('div');
-                errorBlock.className = 'form-error';
-                errorBlock.setAttribute('role', 'alert');
-                errorBlock.style.gridColumn = '1 / -1';
-                errorBlock.innerHTML = '<img src="bo-head-sad.svg" alt=""><span>Hmm, that didn’t go through. The full form below works too.</span>';
-                emailStub.appendChild(errorBlock);
-            });
-        });
-    }
 });
 
 // Beta form embed: the Bo Botty form page reports its own height (once it is on a release with
