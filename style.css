@@ -2475,6 +2475,14 @@ button.menu-toggle {
 .tz-ctl:hover{border-color:#fff}
 .tz-sound[aria-pressed="false"]{background:#0ea5e9;border-color:#0ea5e9;color:#082f49}
 .tz-arrow:focus-visible,.tz-big:focus-visible,.tz-ctl:focus-visible,.tz-step:focus-visible{outline:3px solid #38bdf8;outline-offset:2px}
+.tz-card:fullscreen{display:flex;flex-direction:column;justify-content:center;width:100%;height:100%;max-width:none;border:0;border-radius:0;background:#000}
+.tz-card:-webkit-full-screen{display:flex;flex-direction:column;justify-content:center;width:100%;height:100%;max-width:none;border:0;border-radius:0;background:#000}
+.tz-card:fullscreen .tz-stage{flex:1;min-height:0;aspect-ratio:auto}
+.tz-card:-webkit-full-screen .tz-stage{flex:1;min-height:0;aspect-ratio:auto}
+.tz-card:fullscreen .tz-video{object-fit:contain}
+.tz-card:-webkit-full-screen .tz-video{object-fit:contain}
+.tz-card:fullscreen .tz-title{flex-basis:auto;min-width:0}
+.tz-card:-webkit-full-screen .tz-title{flex-basis:auto;min-width:0}
 @media(max-width:640px){.tz{padding-bottom:44px}.tz-card{border-radius:14px}.tz-prev{left:6px}.tz-next{right:6px}.tz-arrow{width:44px;height:44px}.tz-title{flex-basis:100%;min-width:0}.tz-big{width:64px;height:64px}}
 .hero-section .tz{padding:24px 0 10px}
 .hero-section .hero-grid{grid-template-columns:1fr}

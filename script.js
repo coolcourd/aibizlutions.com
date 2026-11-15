@@ -403,6 +403,36 @@ document.addEventListener('DOMContentLoaded', () => {
     else if (e.key === 'ArrowRight') { userPaused = false; load(i + 1, true); }
   });
 
+  // Full screen: the whole card (video, arrows and controls) where the browser allows it, turning a
+  // phone sideways when it can; on iPhone, which only lets the video itself go full screen, the
+  // phone's own player takes over.
+  var fsBtn = card.querySelector('.tz-fs');
+  var ICON_FS = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var ICON_FS_EXIT = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  function fsEl() { return document.fullscreenElement || document.webkitFullscreenElement || null; }
+  function paintFs() {
+    var on = fsEl() === card;
+    fsBtn.innerHTML = on ? ICON_FS_EXIT : ICON_FS;
+    fsBtn.setAttribute('aria-label', on ? 'Exit full screen' : 'Full screen');
+  }
+  fsBtn.addEventListener('click', function () {
+    if (fsEl()) { (document.exitFullscreen || document.webkitExitFullscreen).call(document); return; }
+    var req = card.requestFullscreen || card.webkitRequestFullscreen;
+    if (req) {
+      var lock = function () {
+        if (screen.orientation && screen.orientation.lock) screen.orientation.lock('landscape').catch(function () {});
+      };
+      var r = req.call(card);
+      if (r && r.then) r.then(lock, function () {}); else lock();
+    } else if (v.webkitEnterFullscreen) {
+      v.webkitEnterFullscreen();
+    }
+    if (v.paused) { userPaused = false; tryPlay(); }
+  });
+  document.addEventListener('fullscreenchange', paintFs);
+  document.addEventListener('webkitfullscreenchange', paintFs);
+  paintFs();
+
   // Play while the card is on screen, pause when it scrolls away. Someone who asks the system for
   // less motion gets the big play button instead of autoplay.
   function onView(visible) {
