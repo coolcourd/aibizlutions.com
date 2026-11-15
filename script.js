@@ -308,3 +308,116 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 })();
+
+// Teaser video card: plays every teaser in order when it comes into view (muted, as browsers
+// require), loops back to the first, and the arrows, the four bars and the buttons let people
+// go back, skip ahead, pause or turn the sound on.
+(function () {
+  var card = document.querySelector('.tz-card');
+  if (!card || !window.HTMLVideoElement) return;
+  var base = card.getAttribute('data-base') || '';
+  var list = [
+    ['clip1-just-tell-bo', 'Just tell Bo'],
+    ['clip3-morning', 'Your morning'],
+    ['clip4-from-scratch', 'Starting from scratch'],
+    ['sizzle-features', 'A quick tour']
+  ];
+  var v = card.querySelector('.tz-video');
+  var big = card.querySelector('.tz-big');
+  var bar = card.querySelector('.tz-bar');
+  var steps = card.querySelector('.tz-steps');
+  var playBtn = card.querySelector('.tz-play');
+  var soundBtn = card.querySelector('.tz-sound');
+  var count = card.querySelector('.tz-count');
+  var name = card.querySelector('.tz-name');
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var i = 0, userPaused = false, started = false, inView = true, fills = [];
+  var ICON_PLAY = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>';
+  var ICON_PAUSE = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg>';
+  var ICON_MUTED = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 9l5 6M21 9l-5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+  var ICON_SOUND = '<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>';
+
+  v.removeAttribute('controls');
+  v.muted = true;
+  card.querySelectorAll('.tz-arrow').forEach(function (b) { b.hidden = false; });
+  bar.hidden = false;
+
+  list.forEach(function (item, k) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'tz-step';
+    b.setAttribute('aria-label', 'Play video ' + (k + 1) + ': ' + item[1]);
+    b.innerHTML = '<span class="tz-track"><span class="tz-fill"></span></span>';
+    b.addEventListener('click', function () { userPaused = false; load(k, true); });
+    steps.appendChild(b);
+    fills.push(b.querySelector('.tz-fill'));
+  });
+
+  function paint() {
+    count.textContent = (i + 1) + ' of ' + list.length;
+    name.textContent = list[i][1];
+    fills.forEach(function (f, k) { f.style.width = k < i ? '100%' : '0'; f.parentNode.parentNode.setAttribute('aria-current', k === i ? 'true' : 'false'); });
+  }
+  function paintButtons() {
+    var playing = !v.paused && !v.ended;
+    playBtn.innerHTML = playing ? ICON_PAUSE : ICON_PLAY;
+    playBtn.setAttribute('aria-label', playing ? 'Pause' : 'Play');
+    soundBtn.innerHTML = (v.muted ? ICON_MUTED + '<span>Turn sound on</span>' : ICON_SOUND + '<span>Sound on</span>');
+    soundBtn.setAttribute('aria-pressed', v.muted ? 'false' : 'true');
+    big.hidden = playing || (!started && !reduce && inView);
+  }
+  function tryPlay() {
+    started = true;
+    var p = v.play();
+    if (p && p.catch) p.catch(function () { big.hidden = false; });
+  }
+  function load(n, play) {
+    i = (n + list.length) % list.length;
+    v.poster = base + list[i][0] + '.jpg';
+    v.src = base + list[i][0] + '.mp4';
+    paint();
+    if (play) tryPlay(); else paintButtons();
+  }
+
+  v.addEventListener('ended', function () { load(i + 1, true); });
+  v.addEventListener('play', paintButtons);
+  v.addEventListener('pause', paintButtons);
+  v.addEventListener('timeupdate', function () {
+    if (v.duration) fills[i].style.width = Math.min(100, (v.currentTime / v.duration) * 100) + '%';
+  });
+  function toggle() {
+    if (v.paused) { userPaused = false; tryPlay(); } else { userPaused = true; v.pause(); }
+  }
+  v.addEventListener('click', toggle);
+  playBtn.addEventListener('click', toggle);
+  big.addEventListener('click', function () { userPaused = false; tryPlay(); });
+  soundBtn.addEventListener('click', function () {
+    v.muted = !v.muted;
+    if (!v.muted && v.paused) { userPaused = false; tryPlay(); }
+    paintButtons();
+  });
+  card.querySelector('.tz-prev').addEventListener('click', function () { userPaused = false; load(i - 1, true); });
+  card.querySelector('.tz-next').addEventListener('click', function () { userPaused = false; load(i + 1, true); });
+  card.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') { userPaused = false; load(i - 1, true); }
+    else if (e.key === 'ArrowRight') { userPaused = false; load(i + 1, true); }
+  });
+
+  // Play while the card is on screen, pause when it scrolls away. Someone who asks the system for
+  // less motion gets the big play button instead of autoplay.
+  function onView(visible) {
+    inView = visible;
+    if (visible) {
+      if (!userPaused && (started || !reduce) && v.paused) tryPlay();
+    } else if (!v.paused) {
+      v.pause();
+    }
+    paintButtons();
+  }
+  load(0, false);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) { onView(es[0].intersectionRatio >= 0.06); }, { threshold: [0, 0.06, 0.5] }).observe(v);
+  } else if (!reduce) {
+    tryPlay();
+  }
+})();
