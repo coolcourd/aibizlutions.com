@@ -2501,3 +2501,21 @@ button.menu-toggle {
 .bo-beta-callout p { margin: 0; font-size: 1rem; }
 .bo-beta-callout .btn { margin: 0; color: var(--bo-ink); border-color: var(--bo-ink); }
 .contact-section .bo-beta-callout p, .contact-section .bo-beta-callout strong { color: var(--bo-ink); }
+
+/* UX pass before publishing (2026-11-21): 44px tap targets, 12px+ text, readable step badges */
+.step-badge { color: var(--bo-ink); }
+#nav-menu a { display: inline-flex; align-items: center; min-height: 44px; }
+.cta-nav-link, .btn, .btn-team-story, .contact-strip-item { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+.btn-team-story { font-size: 14px; padding-left: 16px; padding-right: 16px; }
+.social-link-icon { width: 44px; height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form select { min-height: 44px; font-size: 16px; }
+.contact-form textarea { font-size: 16px; }
+.process-content p { font-size: max(14px, 1em); }
+footer p, footer a { font-size: max(13px, 1em); }
+footer a { display: inline-block; padding: 12px 2px; }
+html { scroll-padding-top: 110px; }
+/* Never cut a sentence off with "..." on small screens; show the whole line. */
+.process-content > p, .service-description { display: block; -webkit-line-clamp: unset; overflow: visible; }
+/* The Bo Botty section and the About section are both dark: give the product its own band. */
+.section-dark.bobotty-section { background: radial-gradient(900px 420px at 50% 0%, #0c4a6e 0%, transparent 70%), var(--bo-ink); border-bottom: 1px solid rgba(148, 163, 184, 0.18); }
+@media (max-width: 640px) { .process-content > p { font-size: 14px; line-height: 1.5; } .process-content h4 { font-size: 16px; } }

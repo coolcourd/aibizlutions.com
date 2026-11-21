@@ -447,3 +447,12 @@ document.addEventListener('DOMContentLoaded', () => {
     tryPlay();
   }
 })();
+
+// Section links land below the sticky top bar, whatever its height at this screen width.
+(function () {
+    var header = document.getElementById('header');
+    if (!header) return;
+    function setOffset() { document.documentElement.style.scrollPaddingTop = (header.offsetHeight + 12) + 'px'; }
+    setOffset();
+    window.addEventListener('resize', setOffset);
+})();
