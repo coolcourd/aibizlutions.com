@@ -72,16 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Modal Functionality
     const modals = {
         story: document.getElementById('storyModal'),
-        chase: document.getElementById('chaseModal'),
-        managed: document.getElementById('managedModal'),
-        enterprise: document.getElementById('enterpriseModal')
+        chase: document.getElementById('chaseModal')
     };
 
     const openButtons = {
         story: document.getElementById('openStoryModal'),
-        chase: document.getElementById('openChaseModal'),
-        managed: document.getElementById('openManagedModal'),
-        enterprise: document.getElementById('openEnterpriseModal')
+        chase: document.getElementById('openChaseModal')
     };
 
     const closeButtons = document.querySelectorAll('.modal-close');
@@ -248,9 +244,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 6. Enterprise Form Submission with Confirmation
-    const enterpriseForm = document.getElementById('enterprise-form');
-    const enterpriseSuccess = document.getElementById('enterprise-form-success');
+    // 6. Project Form Submission with Confirmation (emails support@ through FormSubmit)
+    const enterpriseForm = document.getElementById('project-form');
+    const enterpriseSuccess = document.getElementById('project-form-success');
 
     if (enterpriseForm) {
         enterpriseForm.addEventListener('submit', (e) => {
