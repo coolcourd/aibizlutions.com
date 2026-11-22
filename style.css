@@ -2647,3 +2647,60 @@ h2.section-title { font-size: 32px; line-height: 1.2; margin-bottom: 12px; }
 }
 .fw-shot figcaption a { color: #0369A1; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .fw-fan:focus-visible { outline: 3px solid #0369A1; outline-offset: 6px; border-radius: 12px; }
+
+/* Guides (/guides/), 2026-11-22. One reading column, the same header and footer as the home page. */
+.skip-link { position: absolute; left: 12px; top: -100px; z-index: 2000; padding: 12px 16px; border-radius: 8px; background: var(--bo-ink); color: #fff; font-weight: 600; }
+.skip-link:focus { top: 12px; }
+.guide-main { padding: 32px 0 64px; }
+.guide { max-width: 720px; margin: 0 auto; font-size: 17px; color: #1e293b; }
+.guide-crumbs ol { display: flex; flex-wrap: wrap; gap: 0 8px; margin: 0 0 16px; padding: 0; list-style: none; font-size: 14px; color: #475569; }
+.guide-crumbs li + li::before { content: "/"; margin-right: 8px; color: #94a3b8; }
+.guide-crumbs a { display: inline-block; }
+.guide a { color: #0369A1; text-decoration: underline; text-underline-offset: 3px; }
+.guide a.btn { color: #0B1220; text-decoration: none; }
+.guide h1 { font-size: 40px; line-height: 1.15; margin: 0 0 12px; }
+.guide h2 { font-size: 24px; line-height: 1.3; margin: 40px 0 12px; }
+.guide h3 { font-size: 18px; line-height: 1.4; margin: 24px 0 8px; }
+.guide p, .guide ul, .guide ol { margin: 0 0 16px; }
+.guide ul, .guide ol { padding-left: 1.3em; }
+.guide li { margin: 0 0 6px; }
+.guide-meta { font-size: 14px; color: #475569; margin: 0 0 20px; }
+.guide-answer { margin: 0 0 8px; padding: 20px 24px; border-radius: 12px; background: #f0f9ff; border: 1px solid #bae6fd; font-size: 18px; color: var(--bo-ink); }
+.guide-answer p:last-child { margin-bottom: 0; }
+.guide-table-wrap { overflow-x: auto; margin: 0 0 16px; border: 1px solid #e2e8f0; border-radius: 12px; }
+.guide-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.guide-table caption { text-align: left; padding: 12px 16px 0; font-size: 14px; color: #475569; }
+.guide-table th, .guide-table td { padding: 12px 16px; text-align: left; vertical-align: top; border-top: 1px solid #e2e8f0; }
+.guide-table thead th { border-top: 0; font-weight: 600; color: var(--bo-ink); }
+.guide .fw-points { padding-left: 0; }
+.guide .fw-points li { font-weight: 400; color: #1e293b; }
+.guide .fw-points li strong { color: var(--bo-ink); }
+.guide-cta { margin: 48px 0 0; padding: 28px 24px; border-radius: 12px; background: #f0f9ff; border: 1px solid #bae6fd; text-align: center; }
+.guide-cta h2 { margin: 0 0 8px; }
+.guide-cta p { margin: 0 0 20px; }
+.guide-cta .btn { margin: 0 0 16px; }
+.guide-cta .guide-cta-alt { margin: 0; font-size: 15px; }
+.guide-cta-alt a { white-space: nowrap; }
+.guide-more { margin: 48px 0 0; padding-top: 8px; border-top: 1px solid #e2e8f0; }
+.guide-more ul { list-style: none; padding: 0; }
+.guide-more li { margin: 0; }
+.guide-more a { display: inline-block; padding: 10px 0; font-weight: 600; }
+.guide-list { list-style: none; padding: 0; }
+.guide-list li { margin: 0 0 16px; padding: 20px 24px; border: 1px solid #e2e8f0; border-radius: 12px; }
+.guide-list h2 { margin: 0 0 6px; font-size: 20px; }
+.guide-list p { margin: 0; }
+@media (max-width: 640px) {
+  .guide-main { padding: 16px 0 48px; }
+  .guide { font-size: 16px; }
+  .guide h1 { font-size: 30px; }
+  .guide h2 { font-size: 22px; margin-top: 32px; }
+  .guide-answer { padding: 16px; font-size: 17px; }
+  .guide-cta { padding: 24px 16px; }
+  .guide-cta .btn { width: 100%; }
+  .guide-cta .guide-cta-alt { font-size: 14px; }
+  .guide-table th, .guide-table td { padding: 10px 12px; }
+  .guide-list li { padding: 16px; }
+}
+.guide .guide-crumbs ol { padding-left: 0; align-items: center; }
+.guide .guide-crumbs li { margin: 0; padding: 12px 0; }
+.guide .guide-crumbs a { padding: 12px 0; }
