@@ -2638,7 +2638,7 @@ h2.section-title { font-size: 32px; line-height: 1.2; margin-bottom: 12px; }
 .fw-fan img:nth-child(3) { left: 0; bottom: 0; }
 .fw-shot figcaption { margin-top: 12px; font-size: 14px; color: #475569; text-align: center; }
 .hero-free { margin: 0 0 20px; font-size: 16px; }
-.hero-free a { font-weight: 600; }
+.hero-free a { font-weight: 600; white-space: nowrap; }
 @media (max-width: 900px) {
     .fw-grid { grid-template-columns: minmax(0, 1fr); grid-template-areas: "head" "shot" "copy"; gap: 24px; }
     .fw-head h2 { font-size: 24px; }
