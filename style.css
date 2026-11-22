@@ -2615,23 +2615,35 @@ h2.section-title { font-size: 32px; line-height: 1.2; margin-bottom: 12px; }
 .logo img { height: 64px; }
 @media (max-width: 900px) { .logo img { height: 44px; } }
 
-/* Free website designs (sites.bobotty.com), 2026-11-22 */
+/* Free website designs (sites.bobotty.com), 2026-11-22. Persona review: featured, right after the hero. */
 .fw-section { background: #f0f9ff; }
-.fw-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 48px; align-items: center; }
-.fw-eyebrow { margin: 0 0 8px; font-size: 14px; font-weight: 600; color: var(--bo-sky-deep); }
-.fw-copy h2 { font-size: 2em; line-height: 1.2; margin: 0 0 16px; }
-.fw-lead { font-size: 18px; color: #334155; margin: 0 0 20px; max-width: 60ch; }
-.fw-steps { margin: 0 0 24px; padding: 0; list-style: none; counter-reset: fw; }
-.fw-steps li { counter-increment: fw; display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 12px; margin: 0 0 12px; font-size: 16px; color: #334155; }
-.fw-steps li::before { content: counter(fw); width: 28px; height: 28px; border-radius: 50%; background: var(--bo-white); border: 1px solid #bae6fd; display: grid; place-items: center; font-weight: 600; font-size: 14px; color: var(--bo-sky-deep); }
-.fw-steps b { color: var(--bo-ink); }
-.fw-act { margin: 0 0 12px; }
+.fw-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); grid-template-areas: "head shot" "copy shot"; gap: 0 56px; align-items: start; }
+.fw-head { grid-area: head; align-self: end; }
+.fw-shot { grid-area: shot; align-self: center; margin: 0; }
+.fw-copy { grid-area: copy; }
+.fw-eyebrow { margin: 0 0 8px; font-size: 14px; font-weight: 600; color: #0369A1; }
+.fw-head h2 { font-size: 2.2em; line-height: 1.2; margin: 0 0 16px; }
+.fw-lead { font-size: 18px; color: #334155; margin: 0 0 20px; max-width: 56ch; }
+.fw-points { margin: 0 0 20px; padding: 0; list-style: none; }
+.fw-points li { position: relative; padding-left: 32px; margin: 0 0 10px; font-size: 16px; color: var(--bo-ink); font-weight: 600; }
+.fw-points li::before { content: ""; position: absolute; left: 0; top: 2px; width: 20px; height: 20px; border-radius: 50%; background: #0369A1; }
+.fw-points li::after { content: ""; position: absolute; left: 7px; top: 6px; width: 5px; height: 9px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.fw-price { margin: 0 0 16px; font-size: 16px; color: #334155; }
+.fw-act { margin: 0 0 8px; }
 .fw-fine { margin: 0; font-size: 14px; color: #475569; }
-.fw-shot { display: block; text-decoration: none; }
-.fw-shot img { display: block; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 12px 32px rgba(15, 23, 42, 0.14); }
-.fw-shot span { display: block; margin-top: 8px; font-size: 12px; color: #475569; text-align: center; }
+.fw-fan { position: relative; display: block; aspect-ratio: 16 / 11.5; }
+.fw-fan img { position: absolute; width: 78%; height: auto; border-radius: 10px; box-shadow: 0 14px 36px rgba(15, 23, 42, 0.18); border: 1px solid #e2e8f0; background: #fff; }
+.fw-fan img:nth-child(1) { right: 0; top: 0; transform: rotate(4deg); }
+.fw-fan img:nth-child(2) { left: 11%; top: 9%; transform: rotate(-2deg); }
+.fw-fan img:nth-child(3) { left: 0; bottom: 0; }
+.fw-shot figcaption { margin-top: 12px; font-size: 14px; color: #475569; text-align: center; }
+.hero-free { margin: 0 0 20px; font-size: 16px; }
+.hero-free a { font-weight: 600; }
 @media (max-width: 900px) {
-    .fw-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
-    .fw-copy h2 { font-size: 24px; }
+    .fw-grid { grid-template-columns: minmax(0, 1fr); grid-template-areas: "head" "shot" "copy"; gap: 24px; }
+    .fw-head h2 { font-size: 24px; }
+    .fw-lead { margin: 0; }
     .fw-act .btn { width: 100%; text-align: center; }
 }
+.fw-shot figcaption a { color: #0369A1; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.fw-fan:focus-visible { outline: 3px solid #0369A1; outline-offset: 6px; border-radius: 12px; }
