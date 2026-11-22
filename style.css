@@ -2497,7 +2497,7 @@ button.menu-toggle {
 .bobotty-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
 .bobotty-ctas .btn { margin: 0; }
 .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
-.bo-beta-callout { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 20px; padding: 18px 22px; border-radius: 16px; background: #f0f9ff; border: 1px solid #bae6fd; color: var(--bo-ink); }
+.bo-beta-callout { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 16px; flex-wrap: wrap; margin-top: 20px; padding: 18px 22px; border-radius: 16px; background: #f0f9ff; border: 1px solid #bae6fd; color: var(--bo-ink); }
 .bo-beta-callout p { margin: 0; font-size: 1rem; }
 .bo-beta-callout .btn { margin: 0; color: var(--bo-ink); border-color: var(--bo-ink); }
 .contact-section .bo-beta-callout p, .contact-section .bo-beta-callout strong { color: var(--bo-ink); }
