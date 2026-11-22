@@ -2519,3 +2519,42 @@ html { scroll-padding-top: 110px; }
 /* The Bo Botty section and the About section are both dark: give the product its own band. */
 .section-dark.bobotty-section { background: radial-gradient(900px 420px at 50% 0%, #0c4a6e 0%, transparent 70%), var(--bo-ink); border-bottom: 1px solid rgba(148, 163, 184, 0.18); }
 @media (max-width: 640px) { .process-content > p { font-size: 14px; line-height: 1.5; } .process-content h4 { font-size: 16px; } }
+
+/* ---- Quiet pass (2026-11-22): drop the template effects (icon tiles, hover jumps and tilts,
+   sweeping bars, glow shadows, drifting blobs, scroll fade-ins). Hover is a border change only. ---- */
+.hero-section::before, .contact-section::before { display: none; }
+.btn-primary:hover { box-shadow: none; }
+.hero-cta-group a { box-shadow: none; }
+.hero-cta-group .btn-primary:hover, .hero-cta-group .btn-secondary:hover { transform: none; box-shadow: none; }
+.btn-team-story:hover, .contact-card:hover { transform: none; }
+.team-photo { box-shadow: none; }
+.team-photo:hover { transform: none; box-shadow: none; }
+
+.service-card { border: 1px solid #e2e8f0; box-shadow: none; transition: border-color 150ms ease; }
+.service-card::before { display: none; }
+.service-card:hover { transform: none; box-shadow: none; border-color: #94a3b8; }
+.service-card h4 { margin-top: 0; }
+.service-benefits { list-style: disc; padding-left: 1.2em; margin: 0; }
+.service-benefits li { display: list-item; padding: 3px 0; font-weight: 400; color: #334155; }
+.service-benefits li::marker { color: #94a3b8; }
+
+.process-steps { list-style: none; padding: 0; margin: 0 auto 30px; max-width: 760px; display: flex; flex-direction: column; gap: 16px; }
+.process-steps .process-step { display: flex; flex-direction: row; gap: 20px; align-items: flex-start; margin: 0; }
+.step-num { flex-shrink: 0; width: 40px; height: 40px; margin-top: 22px; border-radius: 50%; border: 2px solid var(--bo-sky-deep); color: var(--bo-sky-deep); background: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; }
+.process-steps .process-content { box-shadow: none; border: 1px solid #e2e8f0; transition: none; }
+.process-steps .process-step:hover .process-content { transform: none; box-shadow: none; border-left-color: #e2e8f0; }
+.process-steps .process-content h4 { margin-bottom: 10px; }
+.process-steps .process-content > p:last-child { margin-bottom: 0; }
+.process-steps .process-deliverables { list-style: disc; padding-left: 1.2em; gap: 2px; }
+.process-steps .process-deliverables li { display: list-item; padding: 2px 0; }
+.process-steps .process-deliverables li::marker { color: #94a3b8; }
+@media (max-width: 640px) {
+  .process-steps .process-step { gap: 12px; }
+  .step-num { width: 32px; height: 32px; font-size: 14px; margin-top: 18px; }
+  .process-steps .process-content { padding: 18px; }
+}
+
+.about-points { margin: 18px 0 0; line-height: 1.7; color: rgba(255, 255, 255, 0.85); }
+.section-dark.bobotty-section { background: #111b2e; }
+.tz-card { box-shadow: none; }
+.hero-tagline, .highlight { text-shadow: none; }
