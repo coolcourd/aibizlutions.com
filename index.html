@@ -27,7 +27,7 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
-    <link rel="stylesheet" href="style.css?v=20261122a">
+    <link rel="stylesheet" href="style.css?v=20261122b">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -87,12 +87,12 @@
 </head>
 <body>
 
-    <div id="beta-banner" class="beta-banner" role="banner">
+    <aside id="beta-banner" class="beta-banner" aria-label="Bo Botty beta">
         <div class="container beta-banner-content">
             <p>Our AI helper, Bo Botty, is in free beta. <a href="https://bobotty.com/">Try Bo Botty →</a></p>
             <button class="beta-close" aria-label="Dismiss banner">&times;</button>
         </div>
-    </div>
+    </aside>
 
     <header id="header">
         <div class="container nav-content">
@@ -110,12 +110,14 @@
         </div>
     </header>
 
+    <main id="main">
+
     <section id="hero" class="hero-section">
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
                     <h1 class=" hero-headline">Websites, apps and AI<span class="highlight hero-tagline">built for small businesses.</span></h1>
-                    <p>We build and customize websites and apps, put AI to work inside the tools you already use, and automate the busywork in between. We also make <a class="hero-inline-link" href="#bobotty">Bo Botty</a>, an AI helper that runs your marketing, customers and invoices from one app.</p>
+                    <p>We build websites and apps, add AI to the tools you already use, and automate the busywork. We also make <a class="hero-inline-link" href="#bobotty">Bo Botty</a>, our AI helper for small businesses.</p>
                     <div class="hero-cta-group">
                         <a href="#contact" class="btn btn-primary">Start a project</a>
                         <a href="#bobotty" class="btn btn-secondary">Meet Bo Botty</a>
@@ -127,11 +129,11 @@
 
     <section id="services" class="section services-section">
         <div class="container">
-            <h3 class="section-title">What we do</h3>
+            <h2 class="section-title">What we do</h2>
             <p class="section-subtitle">From a brand-new website to AI that answers your customers' questions.</p>
             <div class="service-grid service-grid--four">
                 <div class="service-card">
-                    <h4>Websites and apps</h4>
+                    <h3>Websites and apps</h3>
                     <p class="service-description">A fast website that looks like your business, or a custom web app for booking, ordering or looking after your regulars.</p>
                     <ul class="service-benefits">
                         <li>New sites and redesigns</li>
@@ -139,7 +141,7 @@
                     </ul>
                 </div>
                 <div class="service-card">
-                    <h4>Customization</h4>
+                    <h3>Customization</h3>
                     <p class="service-description">Already have software you like? We add the fields, reports and steps it's missing, so it fits the way you work.</p>
                     <ul class="service-benefits">
                         <li>Changes to the tools you already use</li>
@@ -148,7 +150,7 @@
                     </ul>
                 </div>
                 <div class="service-card">
-                    <h4>AI integrations</h4>
+                    <h3>AI integrations</h3>
                     <p class="service-description">AI that answers common questions, drafts emails and replies, and reads documents, using your information and your rules.</p>
                     <ul class="service-benefits">
                         <li>Connected to your email, calendar and customer list</li>
@@ -156,7 +158,7 @@
                     </ul>
                 </div>
                 <div class="service-card">
-                    <h4>Automation</h4>
+                    <h3>Automation</h3>
                     <p class="service-description">Stop copying information from one app to another. We connect your systems and automate the follow-ups, reminders and handoffs that eat your evenings.</p>
                     <ul class="service-benefits">
                         <li>Reminders and follow-ups that go out on time</li>
@@ -171,7 +173,7 @@
 
     <section id="bobotty" class="section section-dark bobotty-section">
         <div class="container">
-            <h3 class="section-title">Our product: Bo Botty</h3>
+            <h2 class="section-title">Our product: Bo Botty</h2>
             <p class="section-subtitle-light">Bo Botty is an AI helper for small businesses. She builds your brand, writes your posts, helps you answer comments and send invoices, and asks before anything goes out. Free while she's in beta.</p>
             <section class="tz" aria-label="Watch Bo at work">
                           <div class="tz-card" data-base="https://bobotty.com/teasers/">
@@ -201,7 +203,7 @@
 
 <section id="about" class="section section-dark">
         <div class="container">
-            <h3 class="section-title">Why AI Bizlutions exists</h3>
+            <h2 class="section-title">Why AI Bizlutions exists</h2>
             <p class="section-subtitle-light">You already do the work better than the chain down the road. We help you out-system them too.</p>
             
             <div class="about-content">
@@ -222,7 +224,7 @@
                         <div class="team-photo">
                             <img src="chase-480.jpg" alt="Chase Headman - Operations Leader" width="480" height="688" loading="lazy" decoding="async">
                         </div>
-                        <h4>Chase Headman</h4>
+                        <h3 class="team-name">Chase Headman</h3>
                         <p class="team-role">Operations & Strategy</p>
                         <button class="btn-team-story" id="openChaseModal">Read Chase's Story</button>
                     </div>
@@ -271,14 +273,14 @@
     </div>
     <section id="process" class="section process-section">
         <div class="container">
-            <h3 class="section-title">How a project works</h3>
+            <h2 class="section-title">How a project works</h2>
             <p class="section-subtitle">From the first conversation to support after launch.</p>
 
             <ol class="process-steps">
                 <li class="process-step">
                     <span class="step-num" aria-hidden="true">1</span>
                     <div class="process-content">
-                        <h4>Talk it through</h4>
+                        <h3>Talk it through</h3>
                         <p>Tell us what's slowing you down. We look at how you work today and find the changes that will save you the most time, before anything gets built.</p>
                         <ul class="process-deliverables">
                             <li>A written plan and price before any work starts</li>
@@ -289,14 +291,14 @@
                 <li class="process-step">
                     <span class="step-num" aria-hidden="true">2</span>
                     <div class="process-content">
-                        <h4>We build it</h4>
+                        <h3>We build it</h3>
                         <p>We build your website, app, integration or automation and show you progress along the way. You review everything before it goes live, and we show you and your team how to use it.</p>
                     </div>
                 </li>
                 <li class="process-step">
                     <span class="step-num" aria-hidden="true">3</span>
                     <div class="process-content">
-                        <h4>We stay with you</h4>
+                        <h3>We stay with you</h3>
                         <p>After launch we keep things running and make changes as your business grows. Add Bo Botty whenever you're ready.</p>
                     </div>
                 </li>
@@ -309,7 +311,7 @@
 
     <section id="contact" class="section contact-section">
         <div class="container">
-            <h3 class="section-title">Tell us about your project</h3>
+            <h2 class="section-title">Tell us about your project</h2>
             <p class="section-subtitle-contact">Tell us what you need and we'll reply within one business day.</p>
 
             <div class="contact-grid contact-grid--stacked">
@@ -410,6 +412,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <footer>
         <div class="container">
