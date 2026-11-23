@@ -2681,6 +2681,11 @@ h2.section-title { font-size: 32px; line-height: 1.2; margin-bottom: 12px; }
 .guide-cta .btn { margin: 0 0 16px; }
 .guide-cta .guide-cta-alt { margin: 0; font-size: 15px; }
 .guide-cta-alt a { white-space: nowrap; }
+.guide-cta-alt a { display: inline-block; padding: 12px 0; margin: -12px 0; }
+.guide a:focus-visible, .skip-link:focus-visible { outline: 3px solid #0369A1; outline-offset: 2px; border-radius: 4px; }
+.guide-list li { position: relative; }
+.guide-list h2 a::after { content: ""; position: absolute; inset: 0; border-radius: 12px; }
+.guide-list li:hover { border-color: #0369A1; }
 .guide-more { margin: 48px 0 0; padding-top: 8px; border-top: 1px solid #e2e8f0; }
 .guide-more ul { list-style: none; padding: 0; }
 .guide-more li { margin: 0; }
