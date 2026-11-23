@@ -2709,3 +2709,8 @@ h2.section-title { font-size: 32px; line-height: 1.2; margin-bottom: 12px; }
 .guide .guide-crumbs ol { padding-left: 0; align-items: center; }
 .guide .guide-crumbs li { margin: 0; padding: 12px 0; }
 .guide .guide-crumbs a { padding: 12px 0; }
+
+/* Tony copy pass (2026-11-23): the two labelled doors under the hero button */
+.hero-section .hero-free { margin: 12px auto 0; font-size: 16px; }
+.hero-section .hero-cta-group + .hero-free { margin-top: 20px; }
+.bobotty-section .hero-inline-link { color: #7dd3fc; text-decoration: underline; }
